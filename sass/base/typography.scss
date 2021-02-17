@@ -1,0 +1,13 @@
+// html, body section
+html{
+    font-size: 1rem; // 16px ....100%
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.7; // 1..7 times bigger than default.
+    color: $bodyColor;
+    padding: 1rem;  // around the entire body, whole websites.
+}

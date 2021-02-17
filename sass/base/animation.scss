@@ -1,0 +1,33 @@
+// animation in css. basically used in transition or hover property
+@keyframes left-to-right{
+    0% {                // starting point
+        opacity: 0; // display none
+        transform: translateX(-10rem); // moving left side
+    }
+    100% {              // ending point
+        opacity: 1;
+        transform: translate(0); // as default
+    }
+}
+
+@keyframes right-to-left{
+    0% {            // initial state
+        opacity: 0;
+        transform: translateX(10rem);
+    }
+    100% {          // final state
+        opacity: 1;
+        transform: translate(0); // as default
+    }
+}
+
+@keyframes bottom-to-top{
+    0% {
+        transform: translateY(20rem);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

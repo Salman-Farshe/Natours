@@ -1,0 +1,63 @@
+// header section
+header{
+    min-height: 95vh;
+    //On linear gradient, always use pure color directly. not a variable color.
+    background-image: linear-gradient(          
+        to right bottom, 
+        #50ca3a, 
+        #19a174), 
+        url('../image/header-01.jpg');
+    background-size: cover; // whatever width, it always try to fit on the screen.
+    background-position: top; // top of the images always same. not cropping if we change the window size.
+    clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+    /* Clip out any part of the images or elements. specify a polygon in which images/elements.
+    polygon is a bunch of coordinates. it's move from left-top corner, then right-top, right-bottom, left bottom. 
+    As a clock wise...
+    */
+    position: relative;
+    .logo{
+        position: absolute;
+        top: 1rem;
+        left: 1.2rem;
+        img{
+            height: 5rem;
+        }
+    }
+    h1{
+        text-transform: uppercase;
+        color: #ffffff;
+        position: absolute;
+        top: 40%;       // relation with parent element
+        left: 50%;      // same to same parent
+        transform: translate(-50%, -50%); // not parent, relation with element itself
+        text-align: center;
+
+        backface-visibility: hidden; // to avoid the shakking during the animation
+        .heading-top{
+            display: block;
+            font-weight: 400;
+            font-size: 4rem;
+            letter-spacing: 2rem;
+            // adding animation from  @keyframe
+            animation-name: left-to-right;
+            animation-duration: 3s;
+            //Shorthand -  animation duration timing function.
+            // left-to-right 3s linear.
+        }
+        .heading-bottom{
+            display: block;
+            font-weight: 700;
+            font-size: 1.2rem;
+            letter-spacing: 1rem;
+            padding-left: 1rem;
+            // adding animation from  @keyframe
+            animation-name: right-to-left;
+            animation-duration: 3s;
+            /*
+            animation-timing-function: linear;
+            animation-delay: 0.2s;
+            animation-iteration-count: 10;
+            */
+        }
+    }
+}

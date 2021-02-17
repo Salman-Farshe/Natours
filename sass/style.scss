@@ -1,186 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+@import 'abstracts/extends';
+@import 'abstracts/functions';
+@import 'abstracts/helpers';
 
-// universal selector, select each & all element, and apply to all.
-*, *::after, *::before{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; // change the box model. so that no margin/padding are added.
-}
+@import 'vendors/bootstrap';
+@import 'vendors/jquery';
 
-// sass - Syatactically Awesome Style Sheet, clean code, sustainable code, representation of code.
-$bodyColor: #777;
+@import 'base/reset';
+@import 'base/typography';
+@import 'base/animation';
 
-:root{
-    --lightGreen: #7ed56f;
-    --mediumGreen: #55c57a;
-    --darkGreen: #28b485;
-    --light-color: #fff;
-    --dark-color: #777;
-}
+@import 'layout/navigation';
+@import 'layout/header';
+@import 'layout/sidebar';
+@import 'layout/grid';
+@import 'layout/form';
+@import 'layout/footer';
 
-// animation in css. basically used in transition or hover property
-@keyframes left-to-right{
-    0% {                // starting point
-        opacity: 0; // display none
-        transform: translateX(-10rem); // moving left side
-    }
-    100% {              // ending point
-        opacity: 1;
-        transform: translate(0); // as default
-    }
-}
+@import 'components/buttons';
+@import 'components/carosel';
+@import 'components/dropdown';
 
-@keyframes right-to-left{
-    0% {            // initial state
-        opacity: 0;
-        transform: translateX(10rem);
-    }
-    100% {          // final state
-        opacity: 1;
-        transform: translate(0); // as default
-    }
-}
+@import 'pages/home';
 
-@keyframes bottom-to-top{
-    0% {
-        transform: translateY(20rem);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-// html, body section
-html{
-    font-size: 1rem; // 16px ....100%
-}
-
-body{
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;
-    font-size: 1rem;
-    line-height: 1.7; // 1..7 times bigger than default.
-    color: $bodyColor;
-    padding: 1rem;  // around the entire body, whole websites.
-}
-
-// header section
-header{
-    min-height: 95vh;
-    //On linear gradient, always use pure color directly. not a variable color.
-    background-image: linear-gradient(          
-        to right bottom, 
-        #50ca3a, 
-        #19a174), 
-        url('../image/header-01.jpg');
-    background-size: cover; // whatever width, it always try to fit on the screen.
-    background-position: top; // top of the images always same. not cropping if we change the window size.
-    clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
-    /* Clip out any part of the images or elements. specify a polygon in which images/elements.
-    polygon is a bunch of coordinates. it's move from left-top corner, then right-top, right-bottom, left bottom. 
-    As a clock wise...
-    */
-    position: relative;
-    .logo{
-        position: absolute;
-        top: 1rem;
-        left: 1.2rem;
-        img{
-            height: 5rem;
-        }
-    }
-    h1{
-        text-transform: uppercase;
-        color: #ffffff;
-        position: absolute;
-        top: 40%;       // relation with parent element
-        left: 50%;      // same to same parent
-        transform: translate(-50%, -50%); // not parent, relation with element itself
-        text-align: center;
-
-        backface-visibility: hidden; // to avoid the shakking during the animation
-        .heading-top{
-            display: block;
-            font-weight: 400;
-            font-size: 4rem;
-            letter-spacing: 2rem;
-            // adding animation from  @keyframe
-            animation-name: left-to-right;
-            animation-duration: 3s;
-            //Shorthand -  animation duration timing function.
-            // left-to-right 3s linear.
-        }
-        .heading-bottom{
-            display: block;
-            font-weight: 700;
-            font-size: 1.2rem;
-            letter-spacing: 1rem;
-            padding-left: 1rem;
-            // adding animation from  @keyframe
-            animation-name: right-to-left;
-            animation-duration: 3s;
-            /*
-            animation-timing-function: linear;
-            animation-delay: 0.2s;
-            animation-iteration-count: 10;
-            */
-        }
-    }
-    .btn:link, .btn:visited{
-        position: absolute;
-        top: 55%;
-        left: 40%;
-        text-transform: uppercase;
-        text-decoration: none;
-        padding: 0.8rem 2rem;
-        border-radius: 5rem;
-        transition: all 0.2s; // shorthand property
-        
-        //animation
-        animation-name: bottom-to-top;
-        animation-duration: 2s;
-        animation-delay: 1s;
-        animation-fill-mode: backwards; // animation start from the initial state at 0%
-    }
-
-    /* pseudo classes are special state of elemnts.
-    style elements under special conditions.
-    allow us to style certain parts of element 
-    */
-    .btn:hover{
-        transform: translateY(-0.1rem); // transform property is cool for modern effect
-        box-shadow: 0 0.5rem 1rem rgba($color: #000000, $alpha: 0.5);
-    }
-    .btn:active{
-        transform: translateY(0);
-        box-shadow: 0 0.3rem 0.5rem rgba($color: #000000, $alpha: 0.2);
-        // right side, bottom side, how much blur, color
-    }
-    .btn-white, .btn-white::after{
-        color: var(--dark-color);
-        background-color: var(--light-color);
-    }
-
-    .btn::after{ // treated like a child of btn
-        content: ""; // content property must be use
-        display: inline-block;
-        width: 100%;
-        height: 100%;   // width,height of that button
-        border-radius: 5rem;
-
-        // behind the actual button
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1; // vertical stacking order
-        transition: all 0.2s;
-    }
-
-    // behind the button after hover
-    .btn:hover::after{
-        transform: scaleX(1.5) scaleY(1.8); // zooming elements
-        opacity: 0;
-    }
-}
+@import 'themes/themes';

@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+
+// universal selector, select each & all element, and apply to all.
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; // change the box model. so that no margin/padding are added.
+}
+

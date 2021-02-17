@@ -1,15 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
-*, *::after, *::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box; }
-
 :root {
   --lightGreen: #7ed56f;
   --mediumGreen: #55c57a;
   --darkGreen: #28b485;
   --light-color: #fff;
   --dark-color: #777; }
+
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 1rem; }
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #777;
+  padding: 1rem; }
 
 @keyframes left-to-right {
   0% {
@@ -35,17 +46,6 @@
     transform: translateY(0);
     opacity: 1; } }
 
-html {
-  font-size: 1rem; }
-
-body {
-  font-family: 'Lato', sans-serif;
-  font-weight: 400;
-  font-size: 1rem;
-  line-height: 1.7;
-  color: #777;
-  padding: 1rem; }
-
 header {
   min-height: 95vh;
   background-image: linear-gradient(to right bottom, #50ca3a, #19a174), url("../image/header-01.jpg");
@@ -56,11 +56,7 @@ header {
     polygon is a bunch of coordinates. it's move from left-top corner, then right-top, right-bottom, left bottom. 
     As a clock wise...
     */
-  position: relative;
-  /* pseudo classes are special state of elemnts.
-    style elements under special conditions.
-    allow us to style certain parts of element 
-    */ }
+  position: relative; }
   header .logo {
     position: absolute;
     top: 1rem;
@@ -96,6 +92,12 @@ header {
             animation-delay: 0.2s;
             animation-iteration-count: 10;
             */ }
+
+header {
+  /* pseudo classes are special state of elemnts.
+    style elements under special conditions.
+    allow us to style certain parts of element 
+    */ }
   header .btn:link, header .btn:visited {
     position: absolute;
     top: 55%;
