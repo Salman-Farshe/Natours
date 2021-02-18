@@ -1,0 +1,113 @@
+.about{
+    overflow: hidden;
+    min-height: 100vh;
+    background-color: $color-gray-light;
+    margin-top: -15vh;
+    padding-top: 5rem;
+    // -15vh, because where the header clip path is finished.
+    // height 95 vh,  clip path 80vh. so 95 - 80 = 15
+    .heading-about{
+        margin: 5rem auto; // to visible the heading
+        font-size: 2rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-align: center;
+        background-image: linear-gradient(to right, $color-light-green, $color-dark-green);
+        -webkit-background-clip: text; // clip to the text, reverse
+        color: transparent;
+
+        letter-spacing: 0.2rem;
+        transition: all 0.2s;
+        
+        &:hover{
+            transform: skewY(2deg) skewX(15deg) scale(0.8);
+        }
+    }
+    .about-content{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        max-width: 100%;
+        margin: 0rem auto;
+
+        .text-contents{
+            max-width: 50%;
+            .text-content-heading{
+                text-transform: uppercase;
+                font-weight: 700;
+                font-size: 1.4rem;
+            }
+            .text-content-paragraph{
+                font-size: 1.1rem;
+                margin-bottom: 3rem;
+                &:not(:nth-child(2)){
+                    margin-bottom: 1rem;
+                }
+            }
+            
+            .btn-about{
+                &:link, &:visited{
+                    color: $color-light-green;
+                    display: inline-block;
+                    text-decoration: none;
+                    border: 1px solid $color-light-green;
+                    border-radius: 1px solid $color-light-green;
+                    font-size: 1.2rem;
+                }
+                &:hover{
+                    background-color: $color-light-green;
+                    color: $color-gray-light;
+                    box-shadow: 0 1rem 2rem rgba($color: #000000, $alpha: 0.15);
+                    transform: translateY(0.2rem);
+                }
+                &:active{
+                    box-shadow: 0 0.5rem 1rem rgba($color: #000000, $alpha: 0.15);
+                    transform: translateY(0);
+                }
+            }
+        }
+        .image-contents{
+            max-width: 50%;
+            .image-container{
+                max-width: 100%;
+                position: relative;
+                img{
+                    display: block;
+                    width: 15rem;
+                    height: 10rem;
+                    margin: auto;
+
+                    box-shadow: 0 1.5rem 4rem rgba($color: #000000, $alpha: 0.4);
+                    border-radius: 0.3rem;
+                    outline-offset: 1rem;
+        
+                    position: absolute;
+                    z-index: 10;
+                    transition: all 0.2s;
+                    &.img-1{
+                        top: 3rem;
+                        left: 15rem;
+                    }
+                    &.img-2{
+                        top: 0rem;
+                        left: 5rem;
+                        
+                    }
+                    &.img-3{
+                        top: 8rem;
+                        left: 10rem;
+                    }
+                    &:hover{
+                        outline: 1rem solid $color-light-green;
+                        transform: scale(1.3);
+                        box-shadow: 0 2.5rem 4rem rgba($color: #000000, $alpha: 0.5);
+                        z-index: 20;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
