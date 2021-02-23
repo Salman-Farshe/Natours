@@ -47,6 +47,10 @@
             }
             
             .btn-about{
+                float: right;
+                margin-right: 3rem;
+                margin-top: 1rem;
+
                 &:link, &:visited{
                     color: $color-light-green;
                     display: inline-block;

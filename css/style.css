@@ -6,6 +6,11 @@
   --light-color: #fff;
   --dark-color: #777; }
 
+.about-btn-clerfix {
+  content: "";
+  clear: both;
+  display: table; }
+
 *, *::after, *::before {
   margin: 0;
   padding: 0;
@@ -172,21 +177,25 @@ header {
         margin-bottom: 3rem; }
         .about .about-content .text-contents .text-content-paragraph:not(:nth-child(2)) {
           margin-bottom: 1rem; }
-      .about .about-content .text-contents .btn-about:link, .about .about-content .text-contents .btn-about:visited {
-        color: #45d12d;
-        display: inline-block;
-        text-decoration: none;
-        border: 1px solid #45d12d;
-        border-radius: 1px solid #45d12d;
-        font-size: 1.2rem; }
-      .about .about-content .text-contents .btn-about:hover {
-        background-color: #45d12d;
-        color: #f7f7f7;
-        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
-        transform: translateY(0.2rem); }
-      .about .about-content .text-contents .btn-about:active {
-        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-        transform: translateY(0); }
+      .about .about-content .text-contents .btn-about {
+        float: right;
+        margin-right: 3rem;
+        margin-top: 1rem; }
+        .about .about-content .text-contents .btn-about:link, .about .about-content .text-contents .btn-about:visited {
+          color: #45d12d;
+          display: inline-block;
+          text-decoration: none;
+          border: 1px solid #45d12d;
+          border-radius: 1px solid #45d12d;
+          font-size: 1.2rem; }
+        .about .about-content .text-contents .btn-about:hover {
+          background-color: #45d12d;
+          color: #f7f7f7;
+          box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+          transform: translateY(0.2rem); }
+        .about .about-content .text-contents .btn-about:active {
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+          transform: translateY(0); }
     .about .about-content .image-contents {
       max-width: 50%;
       padding: 0.5rem 3rem; }
