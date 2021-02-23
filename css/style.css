@@ -161,7 +161,8 @@ header {
     max-width: 100%;
     margin: 0rem auto; }
     .about .about-content .text-contents {
-      max-width: 50%; }
+      max-width: 50%;
+      padding: 0.5rem 3rem; }
       .about .about-content .text-contents .text-content-heading {
         text-transform: uppercase;
         font-weight: 700;
@@ -187,7 +188,8 @@ header {
         box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
         transform: translateY(0); }
     .about .about-content .image-contents {
-      max-width: 50%; }
+      max-width: 50%;
+      padding: 0.5rem 3rem; }
       .about .about-content .image-contents .image-container {
         max-width: 100%;
         position: relative; }
