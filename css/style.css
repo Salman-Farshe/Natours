@@ -145,7 +145,8 @@ header {
   min-height: 100vh;
   background-color: #f7f7f7;
   margin-top: -15vh;
-  padding-top: 5rem; }
+  padding-top: 5rem;
+  padding-bottom: 15rem; }
   .about .heading-about {
     margin: 5rem auto;
     font-size: 2rem;
