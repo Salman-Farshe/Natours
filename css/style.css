@@ -265,3 +265,58 @@ header {
       margin-bottom: 0.5rem; }
     .feature .feature-box .feature-box-text {
       font-weight: 300; }
+
+.tour {
+  min-height: 100vh;
+  background-color: #f7f7f7;
+  padding: 7rem 0rem;
+  margin-top: -5rem; }
+  .tour .tour-heading {
+    margin: 5rem auto;
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    background-image: linear-gradient(to right, #45d12d, #1a8662);
+    -webkit-background-clip: text;
+    color: transparent;
+    letter-spacing: 0.2rem;
+    transition: all 0.2s; }
+    .tour .tour-heading:hover {
+      transform: skewY(2deg) skewX(15deg) scale(0.8); }
+  .tour .tour-cards {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
+    justify-content: space-evenly; }
+    .tour .tour-cards .cards {
+      width: 15rem;
+      height: 25rem; }
+      .tour .tour-cards .cards__side {
+        width: 100%;
+        height: 100%;
+        padding: 2rem;
+        font-size: 2rem;
+        color: black;
+        text-align: center;
+        position: relative;
+        transition: all 3s ease;
+        transform-style: preserve-3d; }
+        .tour .tour-cards .cards__side--front, .tour .tour-cards .cards__side--back {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          width: 100%;
+          padding: 2rem;
+          text-align: center;
+          border-radius: 0.5rem;
+          box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.15); }
+        .tour .tour-cards .cards__side--front {
+          background-color: red; }
+        .tour .tour-cards .cards__side--back {
+          background-color: green;
+          transform: rotateY(0.5turn); }
+    .tour .tour-cards .cards:hover .cards__side {
+      transform: rotateY(0.5turn); }

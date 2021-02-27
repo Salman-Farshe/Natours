@@ -175,3 +175,87 @@
         }
     }
 }
+
+
+.tour{
+    min-height: 100vh;
+    background-color: $color-gray-light;
+    padding: 7rem 0rem;
+    margin-top: -5rem;
+
+    .tour-heading{
+        margin: 5rem auto; // to visible the heading
+        font-size: 2rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-align: center;
+        background-image: linear-gradient(to right, $color-light-green, $color-dark-green);
+        -webkit-background-clip: text; // clip to the text, reverse
+        color: transparent;
+
+        letter-spacing: 0.2rem;
+        transition: all 0.2s;
+        
+        &:hover{
+            transform: skewY(2deg) skewX(15deg) scale(0.8);
+        }
+    }
+    
+    .tour-cards{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto;
+        justify-content: space-evenly;
+        .cards{
+            width: 15rem;
+            height: 25rem;
+            // adding perspective property on the parent element
+            //background-color: rgb(252, 203, 10);
+            //perspective: 150rem;
+            //-moz-perspective: 150rem;
+            
+            &__side{
+                width: 100%;
+                height: 100%;
+                padding: 2rem;
+                font-size: 2rem;
+                color: black;
+                //background-color: blue;
+                text-align: center;
+                position: relative;
+                transition: all 3s ease;
+                //transform-style: flat;
+                transform-style: preserve-3d;
+                // to see cards both sides
+                // hidden extra spaces on width of 2 sides of card
+                //backface-visibility: hidden;
+                
+                &--front, &--back{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    width: 100%;
+                    padding: 2rem;
+                    text-align: center;
+                    border-radius: 0.5rem;
+                    box-shadow: 0 2rem 5rem rgba($color: #000000, $alpha: 0.15);
+                }
+
+                &--front{
+                    background-color: red;
+                    //transform: rotateY(0.5turn);
+                }
+                &--back{
+                    background-color: green;
+                    transform: rotateY(0.5turn);
+                }
+            }
+
+        }
+        .cards:hover .cards__side{
+            transform: rotateY(0.5turn);
+        }
+    }
+}
