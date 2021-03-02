@@ -592,4 +592,9 @@
             object-fit: cover;
         }
     }
+
+    // story__text section
+    &__text{
+        transform: translateX(1.2rem);
+    }
 }
