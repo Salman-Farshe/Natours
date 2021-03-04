@@ -637,3 +637,45 @@ header {
         transform: translateY(0.3rem); }
       .booking .form .form-group__radio label:hover .my__radio, .booking .form .form-group__radio label:active .my__radio {
         background-color: #45d12d; }
+  .booking .form__button {
+    position: relative;
+    margin: 3rem auto;
+    /* pseudo classes are special state of elemnts.
+            style elements under special conditions.
+            allow us to style certain parts of element 
+            */ }
+    .booking .form__button .btn:link, .booking .form__button .btn:visited {
+      position: absolute;
+      top: 50%;
+      left: 0%;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 0.5rem 1.8rem;
+      border-radius: 3rem;
+      transition: all 0.2s;
+      animation-name: bottom-to-top;
+      animation-duration: 2s;
+      animation-delay: 1s;
+      animation-fill-mode: backwards; }
+    .booking .form__button .btn:hover {
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5); }
+    .booking .form__button .btn:active {
+      transform: translateY(0);
+      box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.2); }
+    .booking .form__button .btn-green, .booking .form__button .btn-green::after {
+      color: #fff;
+      background-color: #45d12d; }
+    .booking .form__button .btn::after {
+      content: "";
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      border-radius: 5rem;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      transition: all 0.2s; }
+    .booking .form__button .btn:hover::after {
+      transform: scaleX(1.5) scaleY(1.8);
+      opacity: 0; }
