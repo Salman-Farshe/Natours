@@ -609,7 +609,7 @@ header {
       border-bottom: 3px solid orangered; }
     .booking .form .form-group input::-webkit-input-placeholder {
       color: #c9c9c9; }
-  .booking .form .form-group label {
+  .booking .form .form-group .mylevel {
     font-size: 1rem;
     font-weight: 700;
     display: block;
@@ -620,3 +620,20 @@ header {
     opacity: 0;
     visibility: hidden;
     transform: translateY(-4rem); }
+  .booking .form .form-group__radio {
+    display: inline-block;
+    width: 48%; }
+    .booking .form .form-group__radio input {
+      display: none; }
+    .booking .form .form-group__radio label {
+      cursor: pointer;
+      transition: all 0.1s; }
+      .booking .form .form-group__radio label .my__radio {
+        display: inline-block;
+        width: 1.5rem;
+        height: 1.5rem;
+        border: 0.3rem solid #45d12d;
+        border-radius: 50%;
+        transform: translateY(0.3rem); }
+      .booking .form .form-group__radio label:hover .my__radio, .booking .form .form-group__radio label:active .my__radio {
+        background-color: #45d12d; }
