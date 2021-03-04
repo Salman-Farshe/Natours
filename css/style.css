@@ -554,3 +554,69 @@ header {
       object-fit: cover; }
   .story__text {
     transform: translateX(1.2rem); }
+
+.booking {
+  min-height: 100vh;
+  background-image: linear-gradient(to right bottom, #50ca3a, #19a174);
+  background-size: cover;
+  background-position: top;
+  /* Clip out any part of the images or elements. specify a polygon in which images/elements.
+    polygon is a bunch of coordinates. it's move from left-top corner, then right-top, right-bottom, left bottom. 
+    As a clock wise...
+    */
+  padding: 10rem; }
+  .booking__book {
+    height: 30rem;
+    background-image: linear-gradient(110deg, white 0%, white 50%, transparent 50%), url("../../image/about-04.jpg");
+    background-size: 100%;
+    border-radius: 0.5rem;
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2); }
+    .booking__book__form {
+      width: 50%;
+      padding: 2rem; }
+  .booking .form .form__heading {
+    margin: 0rem auto;
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    background-image: linear-gradient(to right, #45d12d, #1a8662);
+    -webkit-background-clip: text;
+    color: transparent;
+    letter-spacing: 0.2rem;
+    transition: all 0.2s;
+    margin-bottom: 2rem; }
+    .booking .form .form__heading:hover {
+      transform: skewY(2deg) skewX(15deg) scale(0.8); }
+  .booking .form .form-group :not(:last-child) {
+    margin-bottom: 1.2rem; }
+  .booking .form .form-group input {
+    width: 80%;
+    display: block;
+    font-family: inherit;
+    color: inherit;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    border-bottom: 3px solid transparent; }
+    .booking .form .form-group input:focus {
+      outline: none;
+      box-shadow: 0rem 1rem 1.5rem rgba(0, 0, 0, 0.1);
+      border-bottom: 3px solid #45d12d; }
+    .booking .form .form-group input:focus:invalid {
+      border-bottom: 3px solid orangered; }
+    .booking .form .form-group input::-webkit-input-placeholder {
+      color: #c9c9c9; }
+  .booking .form .form-group label {
+    font-size: 1rem;
+    font-weight: 700;
+    display: block;
+    margin-left: 0.4rem;
+    color: inherit;
+    transition: all 0.3s; }
+  .booking .form .form-group input:placeholder-shown + label {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4rem); }
