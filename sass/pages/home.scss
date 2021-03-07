@@ -794,3 +794,57 @@
         }
     }
 }
+
+
+.footer{
+    background-color: $bodyColor;
+
+    &__logo{
+        //position: relative;
+        text-align: center;
+        .mylogo{
+            width: 10rem;
+            height: 10rem;
+            // position: absolute;
+            // top: 0;
+            // left: 45%;
+        }
+    }
+
+    &__content{
+        color: $color-light;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        &__leftSide, &__rightSide{
+            width: 50%;
+            text-align: center;
+        }
+
+        &__leftSide{
+            font-size: 1.3rem;
+            ul{
+                li{
+                    display: inline-block;
+                    list-style: none;
+                    padding: 0.5rem;
+                    color: $color-light-green;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    transition: all 0.3s;
+
+                    &:hover{
+                        color: $color-light;
+                        transform: skewY(5deg) scale(1.2);
+                    }
+                }
+            }
+        }
+
+        &__rightSide{
+            padding: 0rem 2rem;
+            text-align: left;
+        }
+    }
+}

@@ -679,3 +679,35 @@ header {
     .booking .form__button .btn:hover::after {
       transform: scaleX(1.5) scaleY(1.8);
       opacity: 0; }
+
+.footer {
+  background-color: #777; }
+  .footer__logo {
+    text-align: center; }
+    .footer__logo .mylogo {
+      width: 10rem;
+      height: 10rem; }
+  .footer__content {
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; }
+    .footer__content__leftSide, .footer__content__rightSide {
+      width: 50%;
+      text-align: center; }
+    .footer__content__leftSide {
+      font-size: 1.3rem; }
+      .footer__content__leftSide ul li {
+        display: inline-block;
+        list-style: none;
+        padding: 0.5rem;
+        color: #45d12d;
+        text-transform: uppercase;
+        text-decoration: none;
+        transition: all 0.3s; }
+        .footer__content__leftSide ul li:hover {
+          color: #fff;
+          transform: skewY(5deg) scale(1.2); }
+    .footer__content__rightSide {
+      padding: 0rem 2rem;
+      text-align: left; }
