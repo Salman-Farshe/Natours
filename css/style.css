@@ -696,7 +696,13 @@ header {
       width: 50%;
       text-align: center; }
     .footer__content__leftSide {
-      font-size: 1.3rem; }
+      font-size: 1.3rem;
+      margin-top: 1rem; }
+      .footer__content__leftSide hr {
+        width: 70%;
+        margin: 0 auto;
+        text-align: center;
+        transform: translateX(1rem); }
       .footer__content__leftSide ul li {
         display: inline-block;
         list-style: none;
@@ -711,3 +717,7 @@ header {
     .footer__content__rightSide {
       padding: 0rem 2rem;
       text-align: left; }
+      .footer__content__rightSide hr {
+        width: 85%; }
+      .footer__content__rightSide p {
+        padding-right: 3rem; }

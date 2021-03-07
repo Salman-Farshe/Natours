@@ -824,6 +824,13 @@
 
         &__leftSide{
             font-size: 1.3rem;
+            margin-top: 1rem;
+            hr{
+                width: 70%;
+                margin: 0 auto;
+                text-align: center;
+                transform: translateX(1rem);
+            }
             ul{
                 li{
                     display: inline-block;
@@ -843,8 +850,14 @@
         }
 
         &__rightSide{
+            hr{
+                width: 85%;
+            }
             padding: 0rem 2rem;
             text-align: left;
+            p{
+                padding-right: 3rem;
+            }
         }
     }
 }
