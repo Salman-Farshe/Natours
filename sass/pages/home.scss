@@ -879,6 +879,8 @@
         top: 4.8rem;
         right: 1.8rem;
         z-index: 2000; // more than higher
+        text-align: center;
+        cursor: pointer;
     }
 
     &__background{
@@ -964,5 +966,54 @@
     &__checkbox:checked ~ &__nav{
         opacity: 1;
         width: 100%;
+    }
+
+    // Icon part
+    &__icon{
+        position: relative;
+        margin-top: 3.3rem;
+        &,
+        &::before,
+        &::after{
+            width: 2rem;
+            height: 2px;
+            background-color: $color-dark;
+            display: inline-block;
+        }
+        &::before,
+        &::after{
+            content: "";
+            position: absolute;
+            left: 0;
+
+            transition: all 0.2s;
+        }
+        &::before{
+            top: -0.5rem;
+        }
+        &::after{
+            bottom: 1rem;
+        }
+    }
+    &__button:hover &__icon::before{
+        top: -0.7rem;
+    }
+    &__button:hover &__icon::after{
+        top: 0.8rem;
+    }
+
+    // adjacent sibling
+    &__checkbox:checked + &__button &__icon{
+        background-color: transparent;
+    }
+
+    &__checkbox:checked + &__button &__icon::before{
+        // middle point
+        top: 0;
+        transform: rotate(135deg);
+    }
+    &__checkbox:checked + &__button &__icon::after{
+        top: 0;
+        transform: rotate(-135deg);
     }
 }
