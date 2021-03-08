@@ -871,8 +871,8 @@
 
     &__button{
         // its cover the background color
-        width: 6rem;
-        height: 6rem;
+        width: 4rem;
+        height: 4rem;
         border-radius: 50%;
         background-color: $color-light;
         position: fixed;
@@ -884,8 +884,8 @@
     }
 
     &__background{
-        width: 5rem;
-        height: 5rem;
+        width: 3rem;
+        height: 3rem;
         border-radius: 50%;
         // color moves from center/middle to all around circle.
         background-image: radial-gradient($color-light-green, $color-dark-green);
@@ -971,7 +971,7 @@
     // Icon part
     &__icon{
         position: relative;
-        margin-top: 3.3rem;
+        margin-top: 2.3rem;
         &,
         &::before,
         &::after{
