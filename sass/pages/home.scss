@@ -876,7 +876,7 @@
         border-radius: 50%;
         background-color: $color-light;
         position: fixed;
-        top: 4.8rem;
+        top: 2.5rem;
         right: 1.8rem;
         z-index: 2000; // more than higher
         text-align: center;
@@ -891,7 +891,7 @@
         background-image: radial-gradient($color-light-green, $color-dark-green);
 
         position: fixed; // not affected by scrolling
-        top: 5rem;
+        top: 2.7rem;
         right: 2rem;
         z-index: 1000; // most high value
 
