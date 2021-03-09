@@ -1038,6 +1038,26 @@
         opacity: 1;
         visibility: visible;
     }
+    // adding closing tag. Now #tour are the target.
+    // popup move to it's default style
+    &__close{
+        &:link,
+        &:visited{
+            color: $color-dark;
+            position: absolute;
+            top: 0.5rem;
+            right: 2rem;
+            font-size: 2rem;
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-block;
+            transition: all 0.2s;
+            line-height: 1;
+        }
+        &:hover{
+            color: $color-light-green;
+        }
+    }
 
     &__content{
         width: 75%;
