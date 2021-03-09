@@ -836,10 +836,16 @@ header {
   left: 0;
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 5000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
   /* pseudo classes are special state of elemnts.
     style elements under special conditions.
     allow us to style certain parts of element 
     */ }
+  .popup:target {
+    opacity: 1;
+    visibility: visible; }
   .popup__content {
     width: 75%;
     height: 75vh;

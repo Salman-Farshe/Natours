@@ -1029,6 +1029,16 @@
     background-color: rgba($color: #000000, $alpha: 0.8);
     z-index: 5000;
 
+    // for hidden things
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s;
+    &:target{
+        // target popup elements by someone. then its start working.
+        opacity: 1;
+        visibility: visible;
+    }
+
     &__content{
         width: 75%;
         height: 75vh;
