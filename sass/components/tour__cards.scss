@@ -1,0 +1,59 @@
+.tour{
+    .tour-cards{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto;
+        justify-content: space-evenly;
+        .cards{
+            width: 15rem;
+            height: 25rem;
+            // adding perspective property on the parent element
+            //background-color: rgb(252, 203, 10);
+            //perspective: 150rem;
+            //-moz-perspective: 150rem;
+            
+            &__side{
+                width: 100%;
+                height: 100%;
+                padding: 2rem;
+                font-size: 2rem;
+                color: black;
+                //background-color: blue;
+                text-align: center;
+                position: relative;
+                transition: all 3s ease;
+                //transform-style: flat;
+                transform-style: preserve-3d;
+                // to see cards both sides
+                // hidden extra spaces on width of 2 sides of card
+                //backface-visibility: hidden;
+                
+                &--front, &--back{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    width: 100%;
+                    //padding: 2rem;
+                    text-align: center;
+                    border-radius: 0.5rem;
+                    overflow: hidden;
+                    box-shadow: 0 2rem 5rem rgba($color: #000000, $alpha: 0.15);
+                }
+
+                &--front{
+                    background-color: $color-light;
+                    //transform: rotateY(0.5turn);
+                }
+                &--back{
+                    background-color: $color-light;
+                    transform: rotateY(0.5turn);
+                }
+            }
+        }
+        .cards:hover .cards__side{
+            transform: rotateY(0.5turn);
+        }
+    }
+}

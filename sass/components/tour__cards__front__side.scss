@@ -1,0 +1,43 @@
+.tour{
+    .tour-cards{
+        .cards{
+            // Front side content /********************/ 
+            &__image{
+                width: 100%; // parent width
+                height: 10rem;
+                background-size: cover;
+                background-blend-mode: screen;
+                //clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+                &--1{
+                    background-image: linear-gradient(to right, $color-light-green, $color-dark-green), url('../../image/about-01.jpg');
+                }
+                &--2{
+                    background-image: linear-gradient(to right, $color-light-green, $color-dark-green), url('../../image/about-05.jpg');
+                }
+                &--3{
+                    background-image: linear-gradient(to right, $color-light-green, $color-dark-green), url('../../image/about-04.jpg');
+                }
+            }
+            &__heading{
+                font-size: 1.3rem;
+                font-weight: 700;
+                color: $bodyColor;
+                box-decoration-break: clone;
+            }
+            &__content{
+                margin-top: 1.5rem;
+                color: $bodyColor;
+                font-weight: 300;
+                ul{
+                    padding-left: 0rem;
+                    text-align: center;
+                    li{
+                        list-style: none;
+                        font-size: 1rem;
+                        line-height: 1.5;
+                    }
+                }
+            }
+        }
+    }
+}

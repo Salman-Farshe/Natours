@@ -1,0 +1,77 @@
+.tour{
+    .tour-cards{
+        .cards{
+            // back sides content /************************/
+            &__back{
+                height: 100%;
+                color: $color-light;
+                background-image: linear-gradient(to right, $color-light-green, $color-dark-green);
+                background-size: cover;
+                padding-top: 6rem;
+            }
+            &__text{
+                font-size: 1rem;
+            }
+            &__price{
+                font-size: 3rem;
+            }
+            &__button, .btn:link, .btn:visited{
+                // position: absolute;
+                // top: 55%;
+                // left: 40%;
+                background-color: $color-light;
+                color: $bodyColor;
+                text-transform: uppercase;
+                text-decoration: none;
+                padding: 0.5rem 1.5rem;
+                border-radius: 5rem;
+                transition: all 0.2s; // shorthand property
+                
+                //animation
+                animation-name: bottom-to-top;
+                animation-duration: 2s;
+                animation-delay: 1s;
+                animation-fill-mode: backwards; // animation start from the initial state at 0%
+            }
+        
+            /* pseudo classes are special state of elemnts.
+            style elements under special conditions.
+            allow us to style certain parts of element 
+            */
+            .btn:hover{
+                transform: translateY(-0.1rem); // transform property is cool for modern effect
+                box-shadow: 0 0.5rem 1rem rgba($color: #000000, $alpha: 0.5);
+            }
+            .btn:active{
+                transform: translateY(0);
+                box-shadow: 0 0.3rem 0.5rem rgba($color: #000000, $alpha: 0.2);
+                // right side, bottom side, how much blur, color
+            }
+            .cards__button, .cards__button::after{
+                color: var(--dark-color);
+                background-color: var(--light-color);
+            }
+        
+            .btn::after{ // treated like a child of btn
+                content: ""; // content property must be use
+                display: inline-block;
+                width: 100%;
+                height: 100%;   // width,height of that button
+                border-radius: 5rem;
+        
+                // behind the actual button
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1; // vertical stacking order
+                transition: all 0.2s;
+            }
+        
+            // behind the button after hover
+            .btn:hover::after{
+                transform: scaleX(1.5) scaleY(1.8); // zooming elements
+                opacity: 0;
+            }
+        }
+    }
+}

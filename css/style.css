@@ -248,6 +248,181 @@ header {
   .feature .feature-box .feature-box-text {
     font-weight: 300; }
 
+.tour-heading {
+  margin: 5rem auto;
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  background-image: linear-gradient(to right, #45d12d, #1a8662);
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: 0.2rem;
+  transition: all 0.2s; }
+  .tour-heading:hover {
+    transform: skewY(2deg) skewX(15deg) scale(0.8); }
+
+.tour .tour-cards {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto;
+  justify-content: space-evenly; }
+  .tour .tour-cards .cards {
+    width: 15rem;
+    height: 25rem; }
+    .tour .tour-cards .cards__side {
+      width: 100%;
+      height: 100%;
+      padding: 2rem;
+      font-size: 2rem;
+      color: black;
+      text-align: center;
+      position: relative;
+      transition: all 3s ease;
+      transform-style: preserve-3d; }
+      .tour .tour-cards .cards__side--front, .tour .tour-cards .cards__side--back {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        border-radius: 0.5rem;
+        overflow: hidden;
+        box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.15); }
+      .tour .tour-cards .cards__side--front {
+        background-color: #fff; }
+      .tour .tour-cards .cards__side--back {
+        background-color: #fff;
+        transform: rotateY(0.5turn); }
+  .tour .tour-cards .cards:hover .cards__side {
+    transform: rotateY(0.5turn); }
+
+.tour .tour-cards .cards__image {
+  width: 100%;
+  height: 10rem;
+  background-size: cover;
+  background-blend-mode: screen; }
+  .tour .tour-cards .cards__image--1 {
+    background-image: linear-gradient(to right, #45d12d, #1a8662), url("../../image/about-01.jpg"); }
+  .tour .tour-cards .cards__image--2 {
+    background-image: linear-gradient(to right, #45d12d, #1a8662), url("../../image/about-05.jpg"); }
+  .tour .tour-cards .cards__image--3 {
+    background-image: linear-gradient(to right, #45d12d, #1a8662), url("../../image/about-04.jpg"); }
+
+.tour .tour-cards .cards__heading {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #777;
+  box-decoration-break: clone; }
+
+.tour .tour-cards .cards__content {
+  margin-top: 1.5rem;
+  color: #777;
+  font-weight: 300; }
+  .tour .tour-cards .cards__content ul {
+    padding-left: 0rem;
+    text-align: center; }
+    .tour .tour-cards .cards__content ul li {
+      list-style: none;
+      font-size: 1rem;
+      line-height: 1.5; }
+
+.tour .tour-cards .cards {
+  /* pseudo classes are special state of elemnts.
+            style elements under special conditions.
+            allow us to style certain parts of element 
+            */ }
+  .tour .tour-cards .cards__back {
+    height: 100%;
+    color: #fff;
+    background-image: linear-gradient(to right, #45d12d, #1a8662);
+    background-size: cover;
+    padding-top: 6rem; }
+  .tour .tour-cards .cards__text {
+    font-size: 1rem; }
+  .tour .tour-cards .cards__price {
+    font-size: 3rem; }
+  .tour .tour-cards .cards__button, .tour .tour-cards .cards .btn:link, .tour .tour-cards .cards .btn:visited {
+    background-color: #fff;
+    color: #777;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 5rem;
+    transition: all 0.2s;
+    animation-name: bottom-to-top;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-fill-mode: backwards; }
+  .tour .tour-cards .cards .btn:hover {
+    transform: translateY(-0.1rem);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5); }
+  .tour .tour-cards .cards .btn:active {
+    transform: translateY(0);
+    box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.2); }
+  .tour .tour-cards .cards .cards__button, .tour .tour-cards .cards .cards__button::after {
+    color: var(--dark-color);
+    background-color: var(--light-color); }
+  .tour .tour-cards .cards .btn::after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    border-radius: 5rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.2s; }
+  .tour .tour-cards .cards .btn:hover::after {
+    transform: scaleX(1.5) scaleY(1.8);
+    opacity: 0; }
+
+.tour__button {
+  position: relative;
+  margin-top: 5rem;
+  /* pseudo classes are special state of elemnts.
+        style elements under special conditions.
+        allow us to style certain parts of element 
+        */ }
+  .tour__button .btn:link, .tour__button .btn:visited {
+    position: absolute;
+    left: 42%;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0.8rem 2rem;
+    border-radius: 5rem;
+    transition: all 0.2s;
+    animation-name: bottom-to-top;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-fill-mode: backwards; }
+  .tour__button .btn:hover {
+    transform: translateY(-0.1rem);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5); }
+  .tour__button .btn:active {
+    transform: translateY(0);
+    box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.2); }
+  .tour__button .btn-white, .tour__button .btn-white::after {
+    color: #fff;
+    background-color: #45d12d; }
+  .tour__button .btn::after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    border-radius: 5rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.2s; }
+  .tour__button .btn:hover::after {
+    transform: scaleX(1.5) scaleY(1.8);
+    opacity: 0; }
+
 /* about sectioon  */
 .about {
   overflow: hidden;
@@ -272,178 +447,12 @@ header {
   grid-gap: 3rem;
   transform: skewY(-7deg); }
 
+/* tour section  */
 .tour {
   min-height: 100vh;
   background-color: #f7f7f7;
   padding: 7rem 0rem;
   margin-top: -5rem; }
-  .tour .tour-heading {
-    margin: 5rem auto;
-    font-size: 2rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    text-align: center;
-    background-image: linear-gradient(to right, #45d12d, #1a8662);
-    -webkit-background-clip: text;
-    color: transparent;
-    letter-spacing: 0.2rem;
-    transition: all 0.2s; }
-    .tour .tour-heading:hover {
-      transform: skewY(2deg) skewX(15deg) scale(0.8); }
-  .tour .tour-cards {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: auto;
-    justify-content: space-evenly; }
-    .tour .tour-cards .cards {
-      width: 15rem;
-      height: 25rem;
-      /* pseudo classes are special state of elemnts.
-            style elements under special conditions.
-            allow us to style certain parts of element 
-            */ }
-      .tour .tour-cards .cards__side {
-        width: 100%;
-        height: 100%;
-        padding: 2rem;
-        font-size: 2rem;
-        color: black;
-        text-align: center;
-        position: relative;
-        transition: all 3s ease;
-        transform-style: preserve-3d; }
-        .tour .tour-cards .cards__side--front, .tour .tour-cards .cards__side--back {
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          width: 100%;
-          text-align: center;
-          border-radius: 0.5rem;
-          overflow: hidden;
-          box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.15); }
-        .tour .tour-cards .cards__side--front {
-          background-color: #fff; }
-        .tour .tour-cards .cards__side--back {
-          background-color: #fff;
-          transform: rotateY(0.5turn); }
-      .tour .tour-cards .cards__image {
-        width: 100%;
-        height: 10rem;
-        background-size: cover;
-        background-blend-mode: screen; }
-        .tour .tour-cards .cards__image--1 {
-          background-image: linear-gradient(to right, #45d12d, #1a8662), url("../../image/about-01.jpg"); }
-        .tour .tour-cards .cards__image--2 {
-          background-image: linear-gradient(to right, #45d12d, #1a8662), url("../../image/about-05.jpg"); }
-        .tour .tour-cards .cards__image--3 {
-          background-image: linear-gradient(to right, #45d12d, #1a8662), url("../../image/about-04.jpg"); }
-      .tour .tour-cards .cards__heading {
-        font-size: 1.3rem;
-        font-weight: 700;
-        color: #777;
-        box-decoration-break: clone; }
-      .tour .tour-cards .cards__content {
-        margin-top: 1.5rem;
-        color: #777;
-        font-weight: 300; }
-        .tour .tour-cards .cards__content ul {
-          padding-left: 0rem;
-          text-align: center; }
-          .tour .tour-cards .cards__content ul li {
-            list-style: none;
-            font-size: 1rem;
-            line-height: 1.5; }
-      .tour .tour-cards .cards__back {
-        height: 100%;
-        color: #fff;
-        background-image: linear-gradient(to right, #45d12d, #1a8662);
-        background-size: cover;
-        padding-top: 6rem; }
-      .tour .tour-cards .cards__text {
-        font-size: 1rem; }
-      .tour .tour-cards .cards__price {
-        font-size: 3rem; }
-      .tour .tour-cards .cards__button, .tour .tour-cards .cards .btn:link, .tour .tour-cards .cards .btn:visited {
-        background-color: #fff;
-        color: #777;
-        text-transform: uppercase;
-        text-decoration: none;
-        padding: 0.5rem 1.5rem;
-        border-radius: 5rem;
-        transition: all 0.2s;
-        animation-name: bottom-to-top;
-        animation-duration: 2s;
-        animation-delay: 1s;
-        animation-fill-mode: backwards; }
-      .tour .tour-cards .cards .btn:hover {
-        transform: translateY(-0.1rem);
-        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5); }
-      .tour .tour-cards .cards .btn:active {
-        transform: translateY(0);
-        box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.2); }
-      .tour .tour-cards .cards .cards__button, .tour .tour-cards .cards .cards__button::after {
-        color: var(--dark-color);
-        background-color: var(--light-color); }
-      .tour .tour-cards .cards .btn::after {
-        content: "";
-        display: inline-block;
-        width: 100%;
-        height: 100%;
-        border-radius: 5rem;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        transition: all 0.2s; }
-      .tour .tour-cards .cards .btn:hover::after {
-        transform: scaleX(1.5) scaleY(1.8);
-        opacity: 0; }
-    .tour .tour-cards .cards:hover .cards__side {
-      transform: rotateY(0.5turn); }
-  .tour__button {
-    position: relative;
-    margin-top: 5rem;
-    /* pseudo classes are special state of elemnts.
-        style elements under special conditions.
-        allow us to style certain parts of element 
-        */ }
-    .tour__button .btn:link, .tour__button .btn:visited {
-      position: absolute;
-      left: 42%;
-      text-transform: uppercase;
-      text-decoration: none;
-      padding: 0.8rem 2rem;
-      border-radius: 5rem;
-      transition: all 0.2s;
-      animation-name: bottom-to-top;
-      animation-duration: 2s;
-      animation-delay: 1s;
-      animation-fill-mode: backwards; }
-    .tour__button .btn:hover {
-      transform: translateY(-0.1rem);
-      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5); }
-    .tour__button .btn:active {
-      transform: translateY(0);
-      box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.2); }
-    .tour__button .btn-white, .tour__button .btn-white::after {
-      color: #fff;
-      background-color: #45d12d; }
-    .tour__button .btn::after {
-      content: "";
-      display: inline-block;
-      width: 100%;
-      height: 100%;
-      border-radius: 5rem;
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: -1;
-      transition: all 0.2s; }
-    .tour__button .btn:hover::after {
-      transform: scaleX(1.5) scaleY(1.8);
-      opacity: 0; }
 
 .story {
   min-height: 100vh;
