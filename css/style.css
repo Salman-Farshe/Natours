@@ -98,6 +98,113 @@ header {
             animation-iteration-count: 10;
             */ }
 
+/* navigation section  */
+.navigation__checkbox {
+  display: none; }
+
+.navigation__button {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: #fff;
+  position: fixed;
+  top: 2.5rem;
+  right: 1.8rem;
+  z-index: 2000;
+  text-align: center;
+  cursor: pointer; }
+
+.navigation__background {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-image: radial-gradient(#45d12d, #1a8662);
+  position: fixed;
+  top: 2.7rem;
+  right: 2rem;
+  z-index: 1000;
+  transition: transform 0.8s;
+  transition: all 0.8s cubic-bezier(0.65, 0, 0.35, 1); }
+
+.navigation__nav {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1500;
+  opacity: 0;
+  width: 0;
+  transition: all 0.9s cubic-bezier(0.68, -0.6, 0.32, 1.6); }
+
+.navigation__list {
+  list-style: none;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+.navigation__item {
+  margin: 1rem; }
+
+.navigation__link:link, .navigation__link:visited {
+  display: inline-block;
+  font-size: 1.8rem;
+  font-weight: 500;
+  padding: 0.5rem 1.6rem;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #fff 50%);
+  background-size: 220%;
+  transition: all 0.4s; }
+
+.navigation__link:hover, .navigation__link:active {
+  background-position: 100%;
+  color: #45d12d; }
+
+.navigation__checkbox:checked ~ .navigation__background {
+  transform: scale(80); }
+
+.navigation__checkbox:checked ~ .navigation__nav {
+  opacity: 1;
+  width: 100%; }
+
+.navigation__icon {
+  position: relative;
+  margin-top: 2.3rem; }
+  .navigation__icon, .navigation__icon::before, .navigation__icon::after {
+    width: 2rem;
+    height: 2px;
+    background-color: #000000;
+    display: inline-block; }
+  .navigation__icon::before, .navigation__icon::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    transition: all 0.2s; }
+  .navigation__icon::before {
+    top: -0.5rem; }
+  .navigation__icon::after {
+    bottom: 1rem; }
+
+.navigation__button:hover .navigation__icon::before {
+  top: -0.7rem; }
+
+.navigation__button:hover .navigation__icon::after {
+  top: 0.8rem; }
+
+.navigation__checkbox:checked + .navigation__button .navigation__icon {
+  background-color: transparent; }
+
+.navigation__checkbox:checked + .navigation__button .navigation__icon::before {
+  top: 0;
+  transform: rotate(135deg); }
+
+.navigation__checkbox:checked + .navigation__button .navigation__icon::after {
+  top: 0;
+  transform: rotate(-135deg); }
+
 .booking .form .form__heading {
   margin: 0rem auto;
   font-size: 2rem;
@@ -752,112 +859,6 @@ header {
     .booking__book__form {
       width: 50%;
       padding: 2rem; }
-
-.navigation__checkbox {
-  display: none; }
-
-.navigation__button {
-  width: 4rem;
-  height: 4rem;
-  border-radius: 50%;
-  background-color: #fff;
-  position: fixed;
-  top: 2.5rem;
-  right: 1.8rem;
-  z-index: 2000;
-  text-align: center;
-  cursor: pointer; }
-
-.navigation__background {
-  width: 3rem;
-  height: 3rem;
-  border-radius: 50%;
-  background-image: radial-gradient(#45d12d, #1a8662);
-  position: fixed;
-  top: 2.7rem;
-  right: 2rem;
-  z-index: 1000;
-  transition: transform 0.8s;
-  transition: all 0.8s cubic-bezier(0.65, 0, 0.35, 1); }
-
-.navigation__nav {
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  right: 0;
-  z-index: 1500;
-  opacity: 0;
-  width: 0;
-  transition: all 0.9s cubic-bezier(0.68, -0.6, 0.32, 1.6); }
-
-.navigation__list {
-  list-style: none;
-  text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); }
-
-.navigation__item {
-  margin: 1rem; }
-
-.navigation__link:link, .navigation__link:visited {
-  display: inline-block;
-  font-size: 1.8rem;
-  font-weight: 500;
-  padding: 0.5rem 1.6rem;
-  color: #fff;
-  text-transform: uppercase;
-  text-decoration: none;
-  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #fff 50%);
-  background-size: 220%;
-  transition: all 0.4s; }
-
-.navigation__link:hover, .navigation__link:active {
-  background-position: 100%;
-  color: #45d12d; }
-
-.navigation__checkbox:checked ~ .navigation__background {
-  transform: scale(80); }
-
-.navigation__checkbox:checked ~ .navigation__nav {
-  opacity: 1;
-  width: 100%; }
-
-.navigation__icon {
-  position: relative;
-  margin-top: 2.3rem; }
-  .navigation__icon, .navigation__icon::before, .navigation__icon::after {
-    width: 2rem;
-    height: 2px;
-    background-color: #000000;
-    display: inline-block; }
-  .navigation__icon::before, .navigation__icon::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    transition: all 0.2s; }
-  .navigation__icon::before {
-    top: -0.5rem; }
-  .navigation__icon::after {
-    bottom: 1rem; }
-
-.navigation__button:hover .navigation__icon::before {
-  top: -0.7rem; }
-
-.navigation__button:hover .navigation__icon::after {
-  top: 0.8rem; }
-
-.navigation__checkbox:checked + .navigation__button .navigation__icon {
-  background-color: transparent; }
-
-.navigation__checkbox:checked + .navigation__button .navigation__icon::before {
-  top: 0;
-  transform: rotate(135deg); }
-
-.navigation__checkbox:checked + .navigation__button .navigation__icon::after {
-  top: 0;
-  transform: rotate(-135deg); }
 
 .popup {
   width: 100%;

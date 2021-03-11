@@ -1,0 +1,154 @@
+/* navigation section  */
+.navigation{
+    &__checkbox{
+        display: none; // don't want to see
+    }
+
+    &__button{
+        // its cover the background color
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        background-color: $color-light;
+        position: fixed;
+        top: 2.5rem;
+        right: 1.8rem;
+        z-index: 2000; // more than higher
+        text-align: center;
+        cursor: pointer;
+    }
+
+    &__background{
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        // color moves from center/middle to all around circle.
+        background-image: radial-gradient($color-light-green, $color-dark-green);
+
+        position: fixed; // not affected by scrolling
+        top: 2.7rem;
+        right: 2rem;
+        z-index: 1000; // most high value
+
+        // when navigation will open, we will scale entire background, && this animation create the effect 
+        //transform: scale(80);
+
+        transition: transform 0.8s;
+        // using for animation 
+        transition: all 0.8s cubic-bezier(0.65, 0, 0.35, 1); 
+    }
+
+    &__nav{
+        // its cover on the background, after clicking
+
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 1500;
+
+        opacity: 0;
+        width: 0;
+        transition: all 0.9s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+    }
+
+    &__list{
+        // position to the center all things
+        list-style: none;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__item{
+        margin: 1rem;
+    }
+
+    &__link{
+        &:link,
+        &:visited{
+            display: inline-block;
+            font-size: 1.8rem;
+            font-weight: 500;
+            padding: 0.5rem 1.6rem;
+            color: $color-light;
+            text-transform: uppercase;
+            text-decoration: none;
+    
+            background-image: linear-gradient(120deg, 
+            transparent 0%, 
+            transparent 50%, 
+            $color-light 50%);
+            background-size: 220%;
+
+            transition: all 0.4s;
+        }
+
+        &:hover,
+        &:active{
+            background-position: 100%;
+            color: $color-light-green;
+        }
+    }
+
+    // using general sibling
+    &__checkbox:checked ~ &__background{
+        transform: scale(80);
+    }
+
+    &__checkbox:checked ~ &__nav{
+        opacity: 1;
+        width: 100%;
+    }
+
+    // Icon part
+    &__icon{
+        position: relative;
+        margin-top: 2.3rem;
+        &,
+        &::before,
+        &::after{
+            width: 2rem;
+            height: 2px;
+            background-color: $color-dark;
+            display: inline-block;
+        }
+        &::before,
+        &::after{
+            content: "";
+            position: absolute;
+            left: 0;
+
+            transition: all 0.2s;
+        }
+        &::before{
+            top: -0.5rem;
+        }
+        &::after{
+            bottom: 1rem;
+        }
+    }
+    &__button:hover &__icon::before{
+        top: -0.7rem;
+    }
+    &__button:hover &__icon::after{
+        top: 0.8rem;
+    }
+
+    // adjacent sibling
+    &__checkbox:checked + &__button &__icon{
+        background-color: transparent;
+    }
+
+    &__checkbox:checked + &__button &__icon::before{
+        // middle point
+        top: 0;
+        transform: rotate(135deg);
+    }
+    &__checkbox:checked + &__button &__icon::after{
+        top: 0;
+        transform: rotate(-135deg);
+    }
+}
