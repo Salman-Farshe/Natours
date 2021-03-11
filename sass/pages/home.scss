@@ -11,6 +11,7 @@
 }
 
 
+/* feature section  */
 .feature{
     min-height: 100vh;
     //On linear gradient, always use pure color directly. not a variable color.
@@ -33,40 +34,7 @@
     
     // instead of clip-path, use skew()
     transform: skewY(-7deg); 
-    // direct child of the feature selector
-    
-    .feature-box{
-        background-color: $color-gray-light;
-        font-size: 1.2rem;
-        text-align: center;
-        padding: 1.2rem;
-        border-radius: 0.3rem;
-        box-shadow: 0 1.5rem 5rem rgba($color: #000000, $alpha: 0.15);
-        
-        transform: skewY(7deg);
-        transition: transform 0.2s;
-        &:hover{
-            transform: translateY(-1.5rem) scale(1.03) skewY(7deg);
-        }
-
-        .feature-box-icon{
-            margin-bottom: 1.5rem;
-            display: inline-block;
-            background-image: linear-gradient(to right, $color-light-green, $color-dark-green);
-            -webkit-background-clip: text; // clip to the text, reverse
-            color: transparent;
-        }
-
-        .feature-box-heading{
-            font-size: 1.7rem;
-            text-transform: uppercase;
-            margin-bottom: 0.5rem;
-        }
-
-        .feature-box-text{
-            font-weight: 300;
-        }
-    }
+    // direct child of the feature selector  
 }
 
 

@@ -223,6 +223,31 @@ header {
           box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
           z-index: 20; }
 
+/* feature-box section  */
+.feature .feature-box {
+  background-color: #f7f7f7;
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 1.2rem;
+  border-radius: 0.3rem;
+  box-shadow: 0 1.5rem 5rem rgba(0, 0, 0, 0.15);
+  transform: skewY(7deg);
+  transition: transform 0.2s; }
+  .feature .feature-box:hover {
+    transform: translateY(-1.5rem) scale(1.03) skewY(7deg); }
+  .feature .feature-box .feature-box-icon {
+    margin-bottom: 1.5rem;
+    display: inline-block;
+    background-image: linear-gradient(to right, #45d12d, #1a8662);
+    -webkit-background-clip: text;
+    color: transparent; }
+  .feature .feature-box .feature-box-heading {
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem; }
+  .feature .feature-box .feature-box-text {
+    font-weight: 300; }
+
 /* about sectioon  */
 .about {
   overflow: hidden;
@@ -232,6 +257,7 @@ header {
   padding-top: 5rem;
   padding-bottom: 15rem; }
 
+/* feature section  */
 .feature {
   min-height: 100vh;
   background-image: linear-gradient(to right bottom, #50ca3a, #19a174), url("../image/header-01.jpg");
@@ -245,29 +271,6 @@ header {
   justify-content: space-evenly;
   grid-gap: 3rem;
   transform: skewY(-7deg); }
-  .feature .feature-box {
-    background-color: #f7f7f7;
-    font-size: 1.2rem;
-    text-align: center;
-    padding: 1.2rem;
-    border-radius: 0.3rem;
-    box-shadow: 0 1.5rem 5rem rgba(0, 0, 0, 0.15);
-    transform: skewY(7deg);
-    transition: transform 0.2s; }
-    .feature .feature-box:hover {
-      transform: translateY(-1.5rem) scale(1.03) skewY(7deg); }
-    .feature .feature-box .feature-box-icon {
-      margin-bottom: 1.5rem;
-      display: inline-block;
-      background-image: linear-gradient(to right, #45d12d, #1a8662);
-      -webkit-background-clip: text;
-      color: transparent; }
-    .feature .feature-box .feature-box-heading {
-      font-size: 1.7rem;
-      text-transform: uppercase;
-      margin-bottom: 0.5rem; }
-    .feature .feature-box .feature-box-text {
-      font-weight: 300; }
 
 .tour {
   min-height: 100vh;
