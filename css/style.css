@@ -210,6 +210,49 @@ header {
     transform: scaleX(1.5) scaleY(1.8);
     opacity: 0; }
 
+/* footer section  */
+.footer {
+  background-color: #777; }
+  .footer__logo {
+    text-align: center; }
+    .footer__logo .mylogo {
+      width: 10rem;
+      height: 10rem; }
+  .footer__content {
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; }
+    .footer__content__leftSide, .footer__content__rightSide {
+      width: 50%;
+      text-align: center; }
+    .footer__content__leftSide {
+      font-size: 1.3rem;
+      margin-top: 1rem; }
+      .footer__content__leftSide hr {
+        width: 70%;
+        margin: 0 auto;
+        text-align: center;
+        transform: translateX(1rem); }
+      .footer__content__leftSide ul li {
+        display: inline-block;
+        list-style: none;
+        padding: 0.5rem;
+        color: #45d12d;
+        text-transform: uppercase;
+        text-decoration: none;
+        transition: all 0.3s; }
+        .footer__content__leftSide ul li:hover {
+          color: #fff;
+          transform: skewY(5deg) scale(1.2); }
+    .footer__content__rightSide {
+      padding: 0rem 2rem;
+      text-align: left; }
+      .footer__content__rightSide hr {
+        width: 85%; }
+      .footer__content__rightSide p {
+        padding-right: 3rem; }
+
 header {
   /* pseudo classes are special state of elemnts.
     style elements under special conditions.
@@ -709,48 +752,6 @@ header {
     .booking__book__form {
       width: 50%;
       padding: 2rem; }
-
-.footer {
-  background-color: #777; }
-  .footer__logo {
-    text-align: center; }
-    .footer__logo .mylogo {
-      width: 10rem;
-      height: 10rem; }
-  .footer__content {
-    color: #fff;
-    display: flex;
-    flex-direction: row;
-    justify-content: center; }
-    .footer__content__leftSide, .footer__content__rightSide {
-      width: 50%;
-      text-align: center; }
-    .footer__content__leftSide {
-      font-size: 1.3rem;
-      margin-top: 1rem; }
-      .footer__content__leftSide hr {
-        width: 70%;
-        margin: 0 auto;
-        text-align: center;
-        transform: translateX(1rem); }
-      .footer__content__leftSide ul li {
-        display: inline-block;
-        list-style: none;
-        padding: 0.5rem;
-        color: #45d12d;
-        text-transform: uppercase;
-        text-decoration: none;
-        transition: all 0.3s; }
-        .footer__content__leftSide ul li:hover {
-          color: #fff;
-          transform: skewY(5deg) scale(1.2); }
-    .footer__content__rightSide {
-      padding: 0rem 2rem;
-      text-align: left; }
-      .footer__content__rightSide hr {
-        width: 85%; }
-      .footer__content__rightSide p {
-        padding-right: 3rem; }
 
 .navigation__checkbox {
   display: none; }
