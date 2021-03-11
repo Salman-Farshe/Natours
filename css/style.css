@@ -140,6 +140,90 @@ header {
     transform: scaleX(1.5) scaleY(1.8);
     opacity: 0; }
 
+.about .heading-about {
+  margin: 5rem auto;
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  background-image: linear-gradient(to right, #45d12d, #1a8662);
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: 0.2rem;
+  transition: all 0.2s; }
+  .about .heading-about:hover {
+    transform: skewY(2deg) skewX(15deg) scale(0.8); }
+
+.about .about-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  max-width: 100%;
+  margin: 0rem auto; }
+  .about .about-content .text-contents {
+    max-width: 50%;
+    padding: 0.5rem 3rem; }
+    .about .about-content .text-contents .text-content-heading {
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 1.4rem; }
+    .about .about-content .text-contents .text-content-paragraph {
+      font-size: 1.1rem;
+      margin-bottom: 3rem; }
+      .about .about-content .text-contents .text-content-paragraph:not(:nth-child(2)) {
+        margin-bottom: 1rem; }
+    .about .about-content .text-contents .btn-about {
+      float: right;
+      margin-right: 3rem;
+      margin-top: 1rem; }
+      .about .about-content .text-contents .btn-about:link, .about .about-content .text-contents .btn-about:visited {
+        color: #45d12d;
+        display: inline-block;
+        text-decoration: none;
+        border: 1px solid #45d12d;
+        border-radius: 1px solid #45d12d;
+        font-size: 1.2rem; }
+      .about .about-content .text-contents .btn-about:hover {
+        background-color: #45d12d;
+        color: #f7f7f7;
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+        transform: translateY(0.2rem); }
+      .about .about-content .text-contents .btn-about:active {
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+        transform: translateY(0); }
+  .about .about-content .image-contents {
+    max-width: 50%;
+    padding: 0.5rem 3rem; }
+    .about .about-content .image-contents .image-container {
+      max-width: 100%;
+      position: relative; }
+      .about .about-content .image-contents .image-container img {
+        display: block;
+        width: 15rem;
+        height: 10rem;
+        margin: auto;
+        box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+        border-radius: 0.3rem;
+        outline-offset: 1rem;
+        position: absolute;
+        z-index: 10;
+        transition: all 0.2s; }
+        .about .about-content .image-contents .image-container img.img-1 {
+          top: 3rem;
+          left: 15rem; }
+        .about .about-content .image-contents .image-container img.img-2 {
+          top: 0rem;
+          left: 5rem; }
+        .about .about-content .image-contents .image-container img.img-3 {
+          top: 8rem;
+          left: 10rem; }
+        .about .about-content .image-contents .image-container img:hover {
+          outline: 1rem solid #45d12d;
+          transform: scale(1.3);
+          box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
+          z-index: 20; }
+
+/* about sectioon  */
 .about {
   overflow: hidden;
   min-height: 100vh;
@@ -147,87 +231,6 @@ header {
   margin-top: -15vh;
   padding-top: 5rem;
   padding-bottom: 15rem; }
-  .about .heading-about {
-    margin: 5rem auto;
-    font-size: 2rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    text-align: center;
-    background-image: linear-gradient(to right, #45d12d, #1a8662);
-    -webkit-background-clip: text;
-    color: transparent;
-    letter-spacing: 0.2rem;
-    transition: all 0.2s; }
-    .about .heading-about:hover {
-      transform: skewY(2deg) skewX(15deg) scale(0.8); }
-  .about .about-content {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    max-width: 100%;
-    margin: 0rem auto; }
-    .about .about-content .text-contents {
-      max-width: 50%;
-      padding: 0.5rem 3rem; }
-      .about .about-content .text-contents .text-content-heading {
-        text-transform: uppercase;
-        font-weight: 700;
-        font-size: 1.4rem; }
-      .about .about-content .text-contents .text-content-paragraph {
-        font-size: 1.1rem;
-        margin-bottom: 3rem; }
-        .about .about-content .text-contents .text-content-paragraph:not(:nth-child(2)) {
-          margin-bottom: 1rem; }
-      .about .about-content .text-contents .btn-about {
-        float: right;
-        margin-right: 3rem;
-        margin-top: 1rem; }
-        .about .about-content .text-contents .btn-about:link, .about .about-content .text-contents .btn-about:visited {
-          color: #45d12d;
-          display: inline-block;
-          text-decoration: none;
-          border: 1px solid #45d12d;
-          border-radius: 1px solid #45d12d;
-          font-size: 1.2rem; }
-        .about .about-content .text-contents .btn-about:hover {
-          background-color: #45d12d;
-          color: #f7f7f7;
-          box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
-          transform: translateY(0.2rem); }
-        .about .about-content .text-contents .btn-about:active {
-          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-          transform: translateY(0); }
-    .about .about-content .image-contents {
-      max-width: 50%;
-      padding: 0.5rem 3rem; }
-      .about .about-content .image-contents .image-container {
-        max-width: 100%;
-        position: relative; }
-        .about .about-content .image-contents .image-container img {
-          display: block;
-          width: 15rem;
-          height: 10rem;
-          margin: auto;
-          box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
-          border-radius: 0.3rem;
-          outline-offset: 1rem;
-          position: absolute;
-          z-index: 10;
-          transition: all 0.2s; }
-          .about .about-content .image-contents .image-container img.img-1 {
-            top: 3rem;
-            left: 15rem; }
-          .about .about-content .image-contents .image-container img.img-2 {
-            top: 0rem;
-            left: 5rem; }
-          .about .about-content .image-contents .image-container img.img-3 {
-            top: 8rem;
-            left: 10rem; }
-          .about .about-content .image-contents .image-container img:hover {
-            outline: 1rem solid #45d12d;
-            transform: scale(1.3);
-            box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
-            z-index: 20; }
 
 .feature {
   min-height: 100vh;
