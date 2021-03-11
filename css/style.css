@@ -423,6 +423,123 @@ header {
     transform: scaleX(1.5) scaleY(1.8);
     opacity: 0; }
 
+.story__heading {
+  margin: 0rem auto;
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  background-image: linear-gradient(to right, #45d12d, #1a8662);
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: 0.2rem;
+  transition: all 0.2s; }
+  .story__heading:hover {
+    transform: skewY(2deg) skewX(15deg) scale(0.8); }
+
+.story__text {
+  transform: translateX(1.2rem); }
+
+.story .row {
+  width: 70%;
+  margin: 0 auto;
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.3rem;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: left;
+  padding: 1rem;
+  margin-top: 4rem;
+  background-color: #fff; }
+
+.story__image {
+  width: 8rem;
+  height: 8rem;
+  background-color: orangered;
+  -webkit-shape-outside: circle(50% at 50% 50%);
+  shape-outside: circle(50% at 50% 50%);
+  -webkit-clip-path: circle(50% at 50% 50%);
+  clip-path: circle(50% at 50% 50%);
+  transform: translateX(0.3rem);
+  background-image: url("../../image/about-01.jpg");
+  background-size: cover;
+  position: relative;
+  transition: all 0.8s; }
+  .story__image .story__caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    opacity: 0;
+    transition: all 0.8s;
+    backface-visibility: hidden; }
+  .story__image:hover {
+    opacity: 0.5; }
+  .story__image:hover .story__caption {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+    filter: blur(0) brightness(100%); }
+
+.story__button {
+  position: relative;
+  margin-top: 5rem;
+  /* pseudo classes are special state of elemnts.
+        style elements under special conditions.
+        allow us to style certain parts of element 
+        */ }
+  .story__button .btn:link, .story__button .btn:visited {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0.8rem 2rem;
+    border-radius: 5rem;
+    transition: all 0.2s;
+    animation-name: bottom-to-top;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-fill-mode: backwards; }
+  .story__button .btn:hover {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5); }
+  .story__button .btn:active {
+    transform: translateY(0);
+    box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.2); }
+  .story__button .btn-white, .story__button .btn-white::after {
+    color: #fff;
+    background-color: #45d12d; }
+  .story__button .btn::after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    border-radius: 5rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.2s; }
+  .story__button .btn:hover::after {
+    transform: scaleX(1.5) scaleY(1.8);
+    opacity: 0; }
+
+.story__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  opacity: 0.7; }
+  .story__video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
+
 /* about sectioon  */
 .about {
   overflow: hidden;
@@ -454,121 +571,11 @@ header {
   padding: 7rem 0rem;
   margin-top: -5rem; }
 
+/* story section  */
 .story {
   min-height: 100vh;
   padding: 4rem;
   position: relative; }
-  .story__heading {
-    margin: 0rem auto;
-    font-size: 2rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    text-align: center;
-    background-image: linear-gradient(to right, #45d12d, #1a8662);
-    -webkit-background-clip: text;
-    color: transparent;
-    letter-spacing: 0.2rem;
-    transition: all 0.2s; }
-    .story__heading:hover {
-      transform: skewY(2deg) skewX(15deg) scale(0.8); }
-  .story .row {
-    width: 70%;
-    margin: 0 auto;
-    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.1);
-    border-radius: 0.3rem;
-    display: grid;
-    grid-template-columns: auto auto;
-    justify-content: left;
-    padding: 1rem;
-    margin-top: 4rem;
-    background-color: #fff; }
-  .story__image {
-    width: 8rem;
-    height: 8rem;
-    background-color: orangered;
-    -webkit-shape-outside: circle(50% at 50% 50%);
-    shape-outside: circle(50% at 50% 50%);
-    -webkit-clip-path: circle(50% at 50% 50%);
-    clip-path: circle(50% at 50% 50%);
-    transform: translateX(0.3rem);
-    background-image: url("../../image/about-01.jpg");
-    background-size: cover;
-    position: relative;
-    transition: all 0.8s; }
-    .story__image .story__caption {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, 20%);
-      text-align: center;
-      text-transform: uppercase;
-      color: #fff;
-      opacity: 0;
-      transition: all 0.8s;
-      backface-visibility: hidden; }
-    .story__image:hover {
-      opacity: 0.5; }
-    .story__image:hover .story__caption {
-      opacity: 1;
-      transform: translate(-50%, -50%);
-      filter: blur(0) brightness(100%); }
-  .story__button {
-    position: relative;
-    margin-top: 5rem;
-    /* pseudo classes are special state of elemnts.
-        style elements under special conditions.
-        allow us to style certain parts of element 
-        */ }
-    .story__button .btn:link, .story__button .btn:visited {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-transform: uppercase;
-      text-decoration: none;
-      padding: 0.8rem 2rem;
-      border-radius: 5rem;
-      transition: all 0.2s;
-      animation-name: bottom-to-top;
-      animation-duration: 2s;
-      animation-delay: 1s;
-      animation-fill-mode: backwards; }
-    .story__button .btn:hover {
-      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5); }
-    .story__button .btn:active {
-      transform: translateY(0);
-      box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.2); }
-    .story__button .btn-white, .story__button .btn-white::after {
-      color: #fff;
-      background-color: #45d12d; }
-    .story__button .btn::after {
-      content: "";
-      display: inline-block;
-      width: 100%;
-      height: 100%;
-      border-radius: 5rem;
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: -1;
-      transition: all 0.2s; }
-    .story__button .btn:hover::after {
-      transform: scaleX(1.5) scaleY(1.8);
-      opacity: 0; }
-  .story__video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -2;
-    opacity: 0.7; }
-    .story__video video {
-      width: 100%;
-      height: 100%;
-      object-fit: cover; }
-  .story__text {
-    transform: translateX(1.2rem); }
 
 .booking {
   min-height: 100vh;
