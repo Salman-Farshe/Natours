@@ -802,64 +802,6 @@ header {
     height: 100%;
     object-fit: cover; }
 
-/* about sectioon  */
-.about {
-  overflow: hidden;
-  min-height: 100vh;
-  background-color: #f7f7f7;
-  margin-top: -15vh;
-  padding-top: 5rem;
-  padding-bottom: 15rem; }
-
-/* feature section  */
-.feature {
-  min-height: 100vh;
-  background-image: linear-gradient(to right bottom, #50ca3a, #19a174), url("../image/header-01.jpg");
-  background-size: cover;
-  background-position: top;
-  margin-top: -5rem;
-  padding: 10rem 5rem;
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-  grid-template-rows: auto;
-  justify-content: space-evenly;
-  grid-gap: 3rem;
-  transform: skewY(-7deg); }
-
-/* tour section  */
-.tour {
-  min-height: 100vh;
-  background-color: #f7f7f7;
-  padding: 7rem 0rem;
-  margin-top: -5rem; }
-
-/* story section  */
-.story {
-  min-height: 100vh;
-  padding: 4rem;
-  position: relative; }
-
-/* booking section  */
-.booking {
-  min-height: 100vh;
-  background-image: linear-gradient(to right bottom, #50ca3a, #19a174);
-  background-size: cover;
-  background-position: top;
-  /* Clip out any part of the images or elements. specify a polygon in which images/elements.
-    polygon is a bunch of coordinates. it's move from left-top corner, then right-top, right-bottom, left bottom. 
-    As a clock wise...
-    */
-  padding: 5rem 10rem; }
-  .booking__book {
-    height: 30rem;
-    background-image: linear-gradient(110deg, white 0%, white 50%, transparent 50%), url("../../image/about-04.jpg");
-    background-size: 100%;
-    border-radius: 0.5rem;
-    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2); }
-    .booking__book__form {
-      width: 50%;
-      padding: 2rem; }
-
 .popup {
   width: 100%;
   height: 100vh;
@@ -971,3 +913,61 @@ header {
   .popup .btn:hover::after {
     transform: scaleX(1.5) scaleY(1.8);
     opacity: 0; }
+
+/* about sectioon  */
+.about {
+  overflow: hidden;
+  min-height: 100vh;
+  background-color: #f7f7f7;
+  margin-top: -15vh;
+  padding-top: 5rem;
+  padding-bottom: 15rem; }
+
+/* feature section  */
+.feature {
+  min-height: 100vh;
+  background-image: linear-gradient(to right bottom, #50ca3a, #19a174), url("../image/header-01.jpg");
+  background-size: cover;
+  background-position: top;
+  margin-top: -5rem;
+  padding: 10rem 5rem;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: auto;
+  justify-content: space-evenly;
+  grid-gap: 3rem;
+  transform: skewY(-7deg); }
+
+/* tour section  */
+.tour {
+  min-height: 100vh;
+  background-color: #f7f7f7;
+  padding: 7rem 0rem;
+  margin-top: -5rem; }
+
+/* story section  */
+.story {
+  min-height: 100vh;
+  padding: 4rem;
+  position: relative; }
+
+/* booking section  */
+.booking {
+  min-height: 100vh;
+  background-image: linear-gradient(to right bottom, #50ca3a, #19a174);
+  background-size: cover;
+  background-position: top;
+  /* Clip out any part of the images or elements. specify a polygon in which images/elements.
+    polygon is a bunch of coordinates. it's move from left-top corner, then right-top, right-bottom, left bottom. 
+    As a clock wise...
+    */
+  padding: 5rem 10rem; }
+  .booking__book {
+    height: 30rem;
+    background-image: linear-gradient(110deg, white 0%, white 50%, transparent 50%), url("../../image/about-04.jpg");
+    background-size: 100%;
+    border-radius: 0.5rem;
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2); }
+    .booking__book__form {
+      width: 50%;
+      padding: 2rem; }
