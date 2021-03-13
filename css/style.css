@@ -59,6 +59,15 @@ body {
   line-height: 1.7;
   color: #777;
   padding: 1rem; }
+  @media (max-width: 75em) {
+    body {
+      padding: 0rem; } }
+  @media (max-width: 56.25em) {
+    body {
+      padding: 0rem; } }
+  @media (max-width: 37.5em) {
+    body {
+      padding: 0rem; } }
 
 @keyframes left-to-right {
   0% {
