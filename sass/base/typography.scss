@@ -1,6 +1,19 @@
 // html, body section
 html{
     font-size: 1rem; // 16px ....100%
+    
+    @include responsive(big){
+        font-size: 1.2em;
+    }
+    @include responsive(tab__landscape){
+        font-size: 0.8em;
+    }
+    @include responsive(tab__portait){
+        font-size: 0.7em;
+    }
+    @include responsive(phone){
+        font-size: 0.6em;
+    }
 }
 
 body{
