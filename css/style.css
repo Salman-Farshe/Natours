@@ -126,6 +126,9 @@ header {
       letter-spacing: 2rem;
       animation-name: left-to-right;
       animation-duration: 3s; }
+      @media (max-width: 37.5em) {
+        header h1 .heading-top {
+          letter-spacing: 0.5rem; } }
     header h1 .heading-bottom {
       display: block;
       font-weight: 700;
@@ -139,6 +142,9 @@ header {
             animation-delay: 0.2s;
             animation-iteration-count: 10;
             */ }
+      @media (max-width: 37.5em) {
+        header h1 .heading-bottom {
+          letter-spacing: 0.3rem; } }
 
 /* navigation section  */
 .navigation__checkbox {
