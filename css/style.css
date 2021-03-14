@@ -520,6 +520,10 @@ header {
   .about .about-content .image-contents {
     max-width: 50%;
     padding: 0.5rem 3rem; }
+    @media (max-width: 56.25em) {
+      .about .about-content .image-contents {
+        max-width: 30%;
+        padding: 0.5rem 0rem; } }
     .about .about-content .image-contents .image-container {
       max-width: 100%;
       position: relative; }
@@ -534,20 +538,38 @@ header {
         position: absolute;
         z-index: 10;
         transition: all 0.2s; }
+        @media (max-width: 56.25em) {
+          .about .about-content .image-contents .image-container img {
+            width: 10rem;
+            height: 7rem;
+            outline-offset: 0.5rem; } }
         .about .about-content .image-contents .image-container img.img-1 {
           top: 3rem;
           left: 15rem; }
+          @media (max-width: 56.25em) {
+            .about .about-content .image-contents .image-container img.img-1 {
+              left: 10rem; } }
         .about .about-content .image-contents .image-container img.img-2 {
           top: 0rem;
           left: 5rem; }
+          @media (max-width: 56.25em) {
+            .about .about-content .image-contents .image-container img.img-2 {
+              left: 2rem; } }
         .about .about-content .image-contents .image-container img.img-3 {
           top: 8rem;
           left: 10rem; }
+          @media (max-width: 56.25em) {
+            .about .about-content .image-contents .image-container img.img-3 {
+              top: 6rem;
+              left: 7rem; } }
         .about .about-content .image-contents .image-container img:hover {
           outline: 1rem solid #45d12d;
           transform: scale(1.3);
           box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
           z-index: 20; }
+          @media (max-width: 56.25em) {
+            .about .about-content .image-contents .image-container img:hover {
+              outline: 0.5rem solid #45d12d; } }
 
 /* feature-box section  */
 .feature .feature-box {
@@ -989,6 +1011,10 @@ header {
   margin-top: -15vh;
   padding-top: 5rem;
   padding-bottom: 15rem; }
+  @media (max-width: 56.25em) {
+    .about {
+      padding-top: 7rem !important;
+      padding-bottom: 0rem !important; } }
 
 /* feature section  */
 .feature {
