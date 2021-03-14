@@ -21,6 +21,12 @@ header{
             animation-duration: 0.2s;
             animation-delay: 0s;
         }
+        @include responsive(extra__small){
+            top: 50%;
+            left: 30%;
+            animation-duration: 0.2s;
+            animation-delay: 0s;
+        }
     }
 
     /* pseudo classes are special state of elemnts.

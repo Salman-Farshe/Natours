@@ -41,4 +41,9 @@ breakpoint manager:
             @content;
         }
     }
+    @if($breakpoint == extra__small){
+        @media(max-width: 25em) {
+            @content;
+        }
+    }
 }

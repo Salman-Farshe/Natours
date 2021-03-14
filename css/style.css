@@ -436,6 +436,12 @@ header {
         left: 35%;
         animation-duration: 0.2s;
         animation-delay: 0s; } }
+    @media (max-width: 25em) {
+      header .btn:link, header .btn:visited {
+        top: 50%;
+        left: 30%;
+        animation-duration: 0.2s;
+        animation-delay: 0s; } }
   header .btn:hover {
     transform: translateY(-0.1rem);
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5); }
