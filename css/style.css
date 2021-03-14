@@ -426,6 +426,12 @@ header {
     animation-duration: 2s;
     animation-delay: 1s;
     animation-fill-mode: backwards; }
+    @media (max-width: 37.5em) {
+      header .btn:link, header .btn:visited {
+        top: 55%;
+        left: 35%;
+        animation-duration: 0.2s;
+        animation-delay: 0s; } }
   header .btn:hover {
     transform: translateY(-0.1rem);
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5); }

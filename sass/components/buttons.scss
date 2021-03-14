@@ -14,6 +14,13 @@ header{
         animation-duration: 2s;
         animation-delay: 1s;
         animation-fill-mode: backwards; // animation start from the initial state at 0%
+        
+        @include responsive(phone){
+            top: 55%;
+            left: 35%;
+            animation-duration: 0.2s;
+            animation-delay: 0s;
+        }
     }
 
     /* pseudo classes are special state of elemnts.
