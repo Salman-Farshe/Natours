@@ -5,10 +5,19 @@
         justify-content: flex-start;
         max-width: 100%;
         margin: 0rem auto;
+        @include responsive(phone){
+            flex-direction: column;
+            justify-content: center;
+            padding-bottom: 2rem;
+        }
 
         .text-contents{
             max-width: 50%;
             padding: 0.5rem 3rem;
+
+            @include responsive(phone){
+                max-width: 100%;
+            }
             .text-content-heading{
                 text-transform: uppercase;
                 font-weight: 700;
@@ -26,6 +35,10 @@
                 float: right;
                 margin-right: 3rem;
                 margin-top: 1rem;
+                
+                @include responsive(phone){
+                    float: left;
+                }
 
                 &:link, &:visited{
                     color: $color-light-green;
@@ -50,10 +63,13 @@
         .image-contents{
             max-width: 50%;
             padding: 0.5rem 3rem;
-
+ 
             @include responsive(tab__portait){
                 max-width: 30%;
                 padding: 0.5rem 0rem;
+            }
+            @include responsive(phone){
+                display: none;
             }
             .image-container{
                 max-width: 100%;

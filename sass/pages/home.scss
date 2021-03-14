@@ -13,6 +13,11 @@
         padding-top: 7rem !important;
         padding-bottom: 0rem !important;
     }
+    @include responsive(phone){
+        padding-top: 10rem !important;
+        padding-bottom: 8rem !important;
+        min-height: auto !important;
+    }
 }
 
 

@@ -486,9 +486,17 @@ header {
   justify-content: flex-start;
   max-width: 100%;
   margin: 0rem auto; }
+  @media (max-width: 37.5em) {
+    .about .about-content {
+      flex-direction: column;
+      justify-content: center;
+      padding-bottom: 2rem; } }
   .about .about-content .text-contents {
     max-width: 50%;
     padding: 0.5rem 3rem; }
+    @media (max-width: 37.5em) {
+      .about .about-content .text-contents {
+        max-width: 100%; } }
     .about .about-content .text-contents .text-content-heading {
       text-transform: uppercase;
       font-weight: 700;
@@ -502,6 +510,9 @@ header {
       float: right;
       margin-right: 3rem;
       margin-top: 1rem; }
+      @media (max-width: 37.5em) {
+        .about .about-content .text-contents .btn-about {
+          float: left; } }
       .about .about-content .text-contents .btn-about:link, .about .about-content .text-contents .btn-about:visited {
         color: #45d12d;
         display: inline-block;
@@ -524,6 +535,9 @@ header {
       .about .about-content .image-contents {
         max-width: 30%;
         padding: 0.5rem 0rem; } }
+    @media (max-width: 37.5em) {
+      .about .about-content .image-contents {
+        display: none; } }
     .about .about-content .image-contents .image-container {
       max-width: 100%;
       position: relative; }
@@ -1015,6 +1029,11 @@ header {
     .about {
       padding-top: 7rem !important;
       padding-bottom: 0rem !important; } }
+  @media (max-width: 37.5em) {
+    .about {
+      padding-top: 10rem !important;
+      padding-bottom: 8rem !important;
+      min-height: auto !important; } }
 
 /* feature section  */
 .feature {
