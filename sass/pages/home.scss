@@ -118,6 +118,10 @@
     @include responsive(tab__landscape){
         min-height: auto;
     }
+    @include responsive(tab__portait){
+        width: 100vw;
+        min-height: auto;
+    }
     &__book{
         height: 30rem;
         background-image: linear-gradient(110deg, 
@@ -134,9 +138,17 @@
         @include responsive(tab__landscape){
             height: 32rem;
         }
+        @include responsive(tab__portait){
+            height: 32rem;
+            background-image: none;
+            background-color: $color-light;
+        }
         &__form{
             width: 50%;
             padding: 2rem;
+            @include responsive(tab__portait){
+                width: 80%;
+            }
         }
     }
 }

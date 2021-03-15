@@ -1128,6 +1128,10 @@ header {
   @media (max-width: 75em) {
     .booking {
       min-height: auto; } }
+  @media (max-width: 56.25em) {
+    .booking {
+      width: 100vw;
+      min-height: auto; } }
   .booking__book {
     height: 30rem;
     background-image: linear-gradient(110deg, white 0%, white 50%, transparent 50%), url("../../image/about-04.jpg");
@@ -1137,6 +1141,14 @@ header {
     @media (max-width: 75em) {
       .booking__book {
         height: 32rem; } }
+    @media (max-width: 56.25em) {
+      .booking__book {
+        height: 32rem;
+        background-image: none;
+        background-color: #fff; } }
     .booking__book__form {
       width: 50%;
       padding: 2rem; }
+      @media (max-width: 56.25em) {
+        .booking__book__form {
+          width: 80%; } }
