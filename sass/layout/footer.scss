@@ -20,9 +20,17 @@
         flex-direction: row;
         justify-content: center;
 
+        @include responsive(phone){
+            flex-direction: column;
+        }
+
         &__leftSide, &__rightSide{
             width: 50%;
             text-align: center;
+            @include responsive(phone){
+                width: 100%;
+                padding: 1rem 3rem;
+            }
         }
 
         &__leftSide{
@@ -33,6 +41,9 @@
                 margin: 0 auto;
                 text-align: center;
                 transform: translateX(1rem);
+                @include responsive(phone){
+                    width: 100%;
+                }
             }
             ul{
                 li{
@@ -43,6 +54,9 @@
                     text-transform: uppercase;
                     text-decoration: none;
                     transition: all 0.3s;
+                    @include responsive(extra__small){
+                        padding: 0.2rem;
+                    }
 
                     &:hover{
                         color: $color-light;
@@ -55,11 +69,21 @@
         &__rightSide{
             hr{
                 width: 85%;
+                @include responsive(phone){
+                    width: 100%;
+                }
             }
             padding: 0rem 2rem;
             text-align: left;
+            @include responsive(phone){
+                text-align: center;
+                padding: 1rem 3rem;
+            }
             p{
                 padding-right: 3rem;
+                @include responsive(phone){
+                    padding-right: 0rem;
+                }
             }
         }
     }

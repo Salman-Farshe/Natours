@@ -382,9 +382,16 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: center; }
+    @media (max-width: 37.5em) {
+      .footer__content {
+        flex-direction: column; } }
     .footer__content__leftSide, .footer__content__rightSide {
       width: 50%;
       text-align: center; }
+      @media (max-width: 37.5em) {
+        .footer__content__leftSide, .footer__content__rightSide {
+          width: 100%;
+          padding: 1rem 3rem; } }
     .footer__content__leftSide {
       font-size: 1.3rem;
       margin-top: 1rem; }
@@ -393,6 +400,9 @@ header {
         margin: 0 auto;
         text-align: center;
         transform: translateX(1rem); }
+        @media (max-width: 37.5em) {
+          .footer__content__leftSide hr {
+            width: 100%; } }
       .footer__content__leftSide ul li {
         display: inline-block;
         list-style: none;
@@ -401,6 +411,9 @@ header {
         text-transform: uppercase;
         text-decoration: none;
         transition: all 0.3s; }
+        @media (max-width: 25em) {
+          .footer__content__leftSide ul li {
+            padding: 0.2rem; } }
         .footer__content__leftSide ul li:hover {
           color: #fff;
           transform: skewY(5deg) scale(1.2); }
@@ -409,8 +422,18 @@ header {
       text-align: left; }
       .footer__content__rightSide hr {
         width: 85%; }
+        @media (max-width: 37.5em) {
+          .footer__content__rightSide hr {
+            width: 100%; } }
+      @media (max-width: 37.5em) {
+        .footer__content__rightSide {
+          text-align: center;
+          padding: 1rem 3rem; } }
       .footer__content__rightSide p {
         padding-right: 3rem; }
+        @media (max-width: 37.5em) {
+          .footer__content__rightSide p {
+            padding-right: 0rem; } }
 
 header {
   /* pseudo classes are special state of elemnts.
