@@ -46,6 +46,10 @@
     transform: skewY(-7deg); 
     // direct child of the feature selector  
 
+    @include responsive(tab__landscape){
+        min-height: auto;
+    }
+
     @include responsive(tab__portait){
         grid-template-columns: auto auto;
         grid-template-rows: auto auto;

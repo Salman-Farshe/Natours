@@ -1049,6 +1049,9 @@ header {
   justify-content: space-evenly;
   grid-gap: 3rem;
   transform: skewY(-7deg); }
+  @media (max-width: 75em) {
+    .feature {
+      min-height: auto; } }
   @media (max-width: 56.25em) {
     .feature {
       grid-template-columns: auto auto;
