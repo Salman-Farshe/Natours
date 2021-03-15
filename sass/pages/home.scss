@@ -88,7 +88,12 @@
     padding: 4rem;
     //margin-top: -5rem;
     position: relative;
-
+    @include responsive(tab__landscape){
+        min-height: auto;
+    }
+    @include responsive(tab__portait){
+        min-height: auto;
+    }
     @include responsive(phone){
         min-height: auto;
     }
