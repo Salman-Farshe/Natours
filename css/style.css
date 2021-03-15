@@ -828,6 +828,11 @@ header {
   padding: 1rem;
   margin-top: 4rem;
   background-color: #fff; }
+  @media (max-width: 37.5em) {
+    .story .row {
+      grid-template-columns: auto;
+      grid-template-rows: auto auto;
+      justify-content: center; } }
 
 .story__image {
   width: 8rem;
@@ -842,6 +847,10 @@ header {
   background-size: cover;
   position: relative;
   transition: all 0.8s; }
+  @media (max-width: 37.5em) {
+    .story__image {
+      text-align: center;
+      margin: 0 auto; } }
   .story__image .story__caption {
     position: absolute;
     top: 50%;
@@ -1095,6 +1104,9 @@ header {
   min-height: 100vh;
   padding: 4rem;
   position: relative; }
+  @media (max-width: 37.5em) {
+    .story {
+      min-height: auto; } }
 
 /* booking section  */
 .booking {

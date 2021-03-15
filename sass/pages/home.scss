@@ -88,6 +88,10 @@
     padding: 4rem;
     //margin-top: -5rem;
     position: relative;
+
+    @include responsive(phone){
+        min-height: auto;
+    }
 }
 
 
