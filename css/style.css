@@ -1048,7 +1048,8 @@ header {
   padding-bottom: 15rem; }
   @media (max-width: 75em) {
     .about {
-      min-height: auto; } }
+      min-height: auto;
+      padding-top: 10rem; } }
   @media (max-width: 56.25em) {
     .about {
       min-height: auto;

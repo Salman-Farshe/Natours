@@ -11,6 +11,7 @@
 
     @include responsive(tab__landscape){
         min-height: auto;
+        padding-top: 10rem;
     }
     
     @include responsive(tab__portait){
