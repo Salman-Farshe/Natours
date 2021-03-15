@@ -4,6 +4,11 @@
         grid-template-columns: auto auto auto;
         grid-template-rows: auto;
         justify-content: space-evenly;
+
+        @include responsive(phone){
+            grid-template-columns: auto;
+            grid-template-rows: auto auto auto;
+        }
         .cards{
             width: 15rem;
             height: 25rem;
@@ -11,6 +16,12 @@
             //background-color: rgb(252, 203, 10);
             //perspective: 150rem;
             //-moz-perspective: 150rem;
+
+            @include responsive(phone){
+                width: 30rem;
+                height: 25rem;
+                margin-bottom: 3rem;
+            }
             
             &__side{
                 width: 100%;

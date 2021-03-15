@@ -73,6 +73,12 @@
     background-color: $color-gray-light;
     padding: 7rem 0rem;
     margin-top: -5rem;
+    @include responsive(tab__portait){
+        min-height: auto;
+    }
+    @include responsive(phone){
+        min-height: auto;
+    }
 }
 
 /* story section  */
