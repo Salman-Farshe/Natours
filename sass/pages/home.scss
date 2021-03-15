@@ -53,6 +53,7 @@
     @include responsive(tab__portait){
         grid-template-columns: auto auto;
         grid-template-rows: auto auto;
+        min-height: auto;
     }
 
     @include responsive(phone){

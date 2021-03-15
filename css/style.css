@@ -1055,7 +1055,8 @@ header {
   @media (max-width: 56.25em) {
     .feature {
       grid-template-columns: auto auto;
-      grid-template-rows: auto auto; } }
+      grid-template-rows: auto auto;
+      min-height: auto; } }
   @media (max-width: 37.5em) {
     .feature {
       grid-template-columns: auto;
