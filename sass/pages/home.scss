@@ -122,6 +122,11 @@
         width: 100vw;
         min-height: auto;
     }
+
+    @include responsive(phone){
+        min-height: auto;
+        padding: 3rem;
+    }
     &__book{
         height: 30rem;
         background-image: linear-gradient(110deg, 

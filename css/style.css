@@ -1132,6 +1132,10 @@ header {
     .booking {
       width: 100vw;
       min-height: auto; } }
+  @media (max-width: 37.5em) {
+    .booking {
+      min-height: auto;
+      padding: 3rem; } }
   .booking__book {
     height: 30rem;
     background-image: linear-gradient(110deg, white 0%, white 50%, transparent 50%), url("../../image/about-04.jpg");
