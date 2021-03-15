@@ -8,10 +8,14 @@
     padding-bottom: 15rem;
     // -15vh, because where the header clip path is finished.
     // height 95 vh,  clip path 80vh. so 95 - 80 = 15
+
+    @include responsive(tab__landscape){
+        min-height: auto;
+    }
     
     @include responsive(tab__portait){
         min-height: auto;
-        padding: 7rem 0rem !important;
+        padding: 10rem 0rem !important;
     }
     @include responsive(phone){
         padding-top: 10rem !important;
