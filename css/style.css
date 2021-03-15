@@ -1104,6 +1104,12 @@ header {
   min-height: 100vh;
   padding: 4rem;
   position: relative; }
+  @media (max-width: 75em) {
+    .story {
+      min-height: auto; } }
+  @media (max-width: 56.25em) {
+    .story {
+      min-height: auto; } }
   @media (max-width: 37.5em) {
     .story {
       min-height: auto; } }
@@ -1119,12 +1125,18 @@ header {
     As a clock wise...
     */
   padding: 5rem 10rem; }
+  @media (max-width: 75em) {
+    .booking {
+      min-height: auto; } }
   .booking__book {
     height: 30rem;
     background-image: linear-gradient(110deg, white 0%, white 50%, transparent 50%), url("../../image/about-04.jpg");
     background-size: 100%;
     border-radius: 0.5rem;
     box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2); }
+    @media (max-width: 75em) {
+      .booking__book {
+        height: 32rem; } }
     .booking__book__form {
       width: 50%;
       padding: 2rem; }
