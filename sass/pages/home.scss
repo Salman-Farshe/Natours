@@ -10,8 +10,8 @@
     // height 95 vh,  clip path 80vh. so 95 - 80 = 15
     
     @include responsive(tab__portait){
-        padding-top: 7rem !important;
-        padding-bottom: 0rem !important;
+        min-height: auto;
+        padding: 7rem 0rem !important;
     }
     @include responsive(phone){
         padding-top: 10rem !important;

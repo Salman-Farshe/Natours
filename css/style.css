@@ -1027,8 +1027,8 @@ header {
   padding-bottom: 15rem; }
   @media (max-width: 56.25em) {
     .about {
-      padding-top: 7rem !important;
-      padding-bottom: 0rem !important; } }
+      min-height: auto;
+      padding: 7rem 0rem !important; } }
   @media (max-width: 37.5em) {
     .about {
       padding-top: 10rem !important;
