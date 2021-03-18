@@ -371,7 +371,16 @@ header {
 
 /* footer section  */
 .footer {
-  background-color: #777; }
+  background-color: #777;
+  /*
+
+    @media (min-resolution: 192dpi) and (max-width: 600px),
+            (min-width: 2000px){
+
+            //comma (,) act as like as OR
+    }
+
+    */ }
   .footer__logo {
     text-align: center; }
     .footer__logo .mylogo {
