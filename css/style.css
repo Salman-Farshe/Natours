@@ -998,7 +998,7 @@ header {
     color: #45d12d; }
   .popup__content {
     width: 75%;
-    height: 75vh;
+    height: 60vh;
     background-color: #fff;
     box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
     border-radius: 0.3rem;
@@ -1013,35 +1013,51 @@ header {
         */
     display: table;
     overflow: hidden; }
+    @media (min-width: 112.5em) {
+      .popup__content {
+        height: 75vh; } }
   .popup__left {
-    width: 33.33%;
-    display: table-cell; }
+    width: 0%;
+    display: none; }
+    @media (min-width: 112.5em) {
+      .popup__left {
+        width: 33.33%;
+        display: table-cell; } }
   .popup__img {
-    display: block;
-    width: 100%; }
-    .popup__img:nth-child(2) {
-      padding-top: 2rem; }
+    display: none; }
+    @media (min-width: 112.5em) {
+      .popup__img {
+        display: block;
+        width: 100%; }
+        .popup__img:nth-child(2) {
+          padding-top: 2rem; } }
   .popup__right {
-    width: 66.667%;
+    width: 100%;
     display: table-cell;
     vertical-align: middle;
     padding: 3rem 5rem; }
+    @media (min-width: 112.5em) {
+      .popup__right {
+        width: 66.667%;
+        display: table-cell;
+        vertical-align: middle;
+        padding: 3rem 5rem; } }
   .popup__heading {
     font-size: 2rem; }
   .popup__heading__seconndary {
     font-size: 1.5rem; }
   .popup__text {
     font-size: 1.2rem;
-    margin-bottom: 3rem;
+    margin: 3rem 0rem;
     column-count: 2;
     column-gap: 3rem;
     column-rule: 1px solid #45d12d;
     hyphens: auto; }
   .popup__link, .popup .btn:link, .popup .btn:visited {
     position: absolute;
-    top: 75%;
-    left: 60%;
-    transform: translate(-25%, -40%);
+    top: 80%;
+    left: 45%;
+    transform: translate(-20%, -55%);
     text-transform: uppercase;
     text-decoration: none;
     padding: 0.8rem 2rem;
@@ -1054,6 +1070,11 @@ header {
         animation-delay: 1s;
         animation-fill-mode: backwards; // animation start from the initial state at 0%
         */ }
+    @media (min-width: 112.5em) {
+      .popup__link, .popup .btn:link, .popup .btn:visited {
+        top: 75%;
+        left: 60%;
+        transform: translate(-25%, -40%); } }
   .popup .btn:hover {
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5); }
   .popup .btn:active {
