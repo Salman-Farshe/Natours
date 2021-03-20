@@ -14,7 +14,6 @@ header{
         animation-duration: 2s;
         animation-delay: 1s;
         animation-fill-mode: backwards; // animation start from the initial state at 0%
-        
         @include responsive(phone){
             top: 55%;
             left: 35%;
@@ -23,7 +22,7 @@ header{
         }
         @include responsive(extra__small){
             top: 50%;
-            left: 30%;
+            left: 40%;
             animation-duration: 0.2s;
             animation-delay: 0s;
         }

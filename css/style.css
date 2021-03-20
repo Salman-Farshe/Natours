@@ -476,7 +476,7 @@ header {
     @media only screen and (max-width: 25em), only screen and (hover: none) {
       header .btn:link, header .btn:visited {
         top: 50%;
-        left: 30%;
+        left: 40%;
         animation-duration: 0.2s;
         animation-delay: 0s; } }
   header .btn:hover {
@@ -812,7 +812,7 @@ header {
     animation-fill-mode: backwards; }
     @media only screen and (max-width: 25em), only screen and (hover: none) {
       .tour__button .btn:link, .tour__button .btn:visited {
-        left: 30%; } }
+        left: 40%; } }
   .tour__button .btn:hover {
     transform: translateY(-0.1rem);
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5); }
