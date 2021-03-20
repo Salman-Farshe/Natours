@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "watch:sass": "node-sass sass/style.scss css/style.css -w",
     "compile:sass": "node-sass sass/style.scss css/style.css"
   },
   "author": "Salman Farshe",
