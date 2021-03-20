@@ -52,7 +52,7 @@ html {
   @media only screen and (max-width: 56.25em) {
     html {
       font-size: 0.7em; } }
-  @media only screen and (max-width: 37.5em) {
+  @media only screen and (max-width: 37.5em), only screen and (hover: none) {
     html {
       font-size: 0.6em;
       overflow-x: hidden !important; } }
@@ -70,7 +70,7 @@ body {
   @media only screen and (max-width: 56.25em) {
     body {
       padding: 0rem; } }
-  @media only screen and (max-width: 37.5em) {
+  @media only screen and (max-width: 37.5em), only screen and (hover: none) {
     body {
       padding: 0rem;
       overflow-x: hidden !important;
@@ -134,7 +134,7 @@ header {
       letter-spacing: 2rem;
       animation-name: left-to-right;
       animation-duration: 3s; }
-      @media only screen and (max-width: 37.5em) {
+      @media only screen and (max-width: 37.5em), only screen and (hover: none) {
         header h1 .heading-top {
           letter-spacing: 0.5rem; } }
     header h1 .heading-bottom {
@@ -150,7 +150,7 @@ header {
             animation-delay: 0.2s;
             animation-iteration-count: 10;
             */ }
-      @media only screen and (max-width: 37.5em) {
+      @media only screen and (max-width: 37.5em), only screen and (hover: none) {
         header h1 .heading-bottom {
           letter-spacing: 0.3rem; } }
 
@@ -396,13 +396,13 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: center; }
-    @media only screen and (max-width: 37.5em) {
+    @media only screen and (max-width: 37.5em), only screen and (hover: none) {
       .footer__content {
         flex-direction: column; } }
     .footer__content__leftSide, .footer__content__rightSide {
       width: 50%;
       text-align: center; }
-      @media only screen and (max-width: 37.5em) {
+      @media only screen and (max-width: 37.5em), only screen and (hover: none) {
         .footer__content__leftSide, .footer__content__rightSide {
           width: 100%;
           padding: 1rem 3rem; } }
@@ -414,7 +414,7 @@ header {
         margin: 0 auto;
         text-align: center;
         transform: translateX(1rem); }
-        @media only screen and (max-width: 37.5em) {
+        @media only screen and (max-width: 37.5em), only screen and (hover: none) {
           .footer__content__leftSide hr {
             width: 100%; } }
       .footer__content__leftSide ul li {
@@ -425,7 +425,7 @@ header {
         text-transform: uppercase;
         text-decoration: none;
         transition: all 0.3s; }
-        @media only screen and (max-width: 25em) {
+        @media only screen and (max-width: 25em), only screen and (hover: none) {
           .footer__content__leftSide ul li {
             padding: 0.2rem; } }
         .footer__content__leftSide ul li:hover {
@@ -436,16 +436,16 @@ header {
       text-align: left; }
       .footer__content__rightSide hr {
         width: 85%; }
-        @media only screen and (max-width: 37.5em) {
+        @media only screen and (max-width: 37.5em), only screen and (hover: none) {
           .footer__content__rightSide hr {
             width: 100%; } }
-      @media only screen and (max-width: 37.5em) {
+      @media only screen and (max-width: 37.5em), only screen and (hover: none) {
         .footer__content__rightSide {
           text-align: center;
           padding: 1rem 3rem; } }
       .footer__content__rightSide p {
         padding-right: 3rem; }
-        @media only screen and (max-width: 37.5em) {
+        @media only screen and (max-width: 37.5em), only screen and (hover: none) {
           .footer__content__rightSide p {
             padding-right: 0rem; } }
 
@@ -467,13 +467,13 @@ header {
     animation-duration: 2s;
     animation-delay: 1s;
     animation-fill-mode: backwards; }
-    @media only screen and (max-width: 37.5em) {
+    @media only screen and (max-width: 37.5em), only screen and (hover: none) {
       header .btn:link, header .btn:visited {
         top: 55%;
         left: 35%;
         animation-duration: 0.2s;
         animation-delay: 0s; } }
-    @media only screen and (max-width: 25em) {
+    @media only screen and (max-width: 25em), only screen and (hover: none) {
       header .btn:link, header .btn:visited {
         top: 50%;
         left: 30%;
@@ -523,7 +523,7 @@ header {
   justify-content: flex-start;
   max-width: 100%;
   margin: 0rem auto; }
-  @media only screen and (max-width: 37.5em) {
+  @media only screen and (max-width: 37.5em), only screen and (hover: none) {
     .about .about-content {
       flex-direction: column;
       justify-content: center;
@@ -531,7 +531,7 @@ header {
   .about .about-content .text-contents {
     max-width: 50%;
     padding: 0.5rem 3rem; }
-    @media only screen and (max-width: 37.5em) {
+    @media only screen and (max-width: 37.5em), only screen and (hover: none) {
       .about .about-content .text-contents {
         max-width: 100%; } }
     .about .about-content .text-contents .text-content-heading {
@@ -547,7 +547,7 @@ header {
       float: right;
       margin-right: 3rem;
       margin-top: 1rem; }
-      @media only screen and (max-width: 37.5em) {
+      @media only screen and (max-width: 37.5em), only screen and (hover: none) {
         .about .about-content .text-contents .btn-about {
           float: left; } }
       .about .about-content .text-contents .btn-about:link, .about .about-content .text-contents .btn-about:visited {
@@ -572,7 +572,7 @@ header {
       .about .about-content .image-contents {
         max-width: 30%;
         padding: 0.5rem 0rem; } }
-    @media only screen and (max-width: 37.5em) {
+    @media only screen and (max-width: 37.5em), only screen and (hover: none) {
       .about .about-content .image-contents {
         display: none; } }
     .about .about-content .image-contents .image-container {
@@ -632,7 +632,7 @@ header {
   box-shadow: 0 1.5rem 5rem rgba(0, 0, 0, 0.15);
   transform: skewY(7deg);
   transition: transform 0.2s; }
-  @media only screen and (max-width: 37.5em) {
+  @media only screen and (max-width: 37.5em), only screen and (hover: none) {
     .feature .feature-box {
       margin: 0 3rem; } }
   .feature .feature-box:hover {
@@ -669,14 +669,14 @@ header {
   grid-template-columns: auto auto auto;
   grid-template-rows: auto;
   justify-content: space-evenly; }
-  @media only screen and (max-width: 37.5em) {
+  @media only screen and (max-width: 37.5em), only screen and (hover: none) {
     .tour .tour-cards {
       grid-template-columns: auto;
       grid-template-rows: auto auto auto; } }
   .tour .tour-cards .cards {
     width: 15rem;
     height: 25rem; }
-    @media only screen and (max-width: 37.5em) {
+    @media only screen and (max-width: 37.5em), only screen and (hover: none) {
       .tour .tour-cards .cards {
         width: 30rem;
         height: 25rem;
@@ -810,7 +810,7 @@ header {
     animation-duration: 2s;
     animation-delay: 1s;
     animation-fill-mode: backwards; }
-    @media only screen and (max-width: 25em) {
+    @media only screen and (max-width: 25em), only screen and (hover: none) {
       .tour__button .btn:link, .tour__button .btn:visited {
         left: 30%; } }
   .tour__button .btn:hover {
@@ -865,7 +865,7 @@ header {
   padding: 1rem;
   margin-top: 4rem;
   background-color: #fff; }
-  @media only screen and (max-width: 37.5em) {
+  @media only screen and (max-width: 37.5em), only screen and (hover: none) {
     .story .row {
       grid-template-columns: auto;
       grid-template-rows: auto auto;
@@ -884,7 +884,7 @@ header {
   background-size: cover;
   position: relative;
   transition: all 0.8s; }
-  @media only screen and (max-width: 37.5em) {
+  @media only screen and (max-width: 37.5em), only screen and (hover: none) {
     .story__image {
       text-align: center;
       margin: 0 auto; } }
@@ -1118,7 +1118,7 @@ header {
     .about {
       min-height: auto;
       padding: 10rem 0rem !important; } }
-  @media only screen and (max-width: 37.5em) {
+  @media only screen and (max-width: 37.5em), only screen and (hover: none) {
     .about {
       padding-top: 10rem !important;
       padding-bottom: 8rem !important;
@@ -1146,7 +1146,7 @@ header {
       grid-template-columns: auto auto;
       grid-template-rows: auto auto;
       min-height: auto; } }
-  @media only screen and (max-width: 37.5em) {
+  @media only screen and (max-width: 37.5em), only screen and (hover: none) {
     .feature {
       grid-template-columns: auto;
       grid-template-rows: auto auto auto auto; } }
@@ -1163,7 +1163,7 @@ header {
   @media only screen and (max-width: 56.25em) {
     .tour {
       min-height: auto; } }
-  @media only screen and (max-width: 37.5em) {
+  @media only screen and (max-width: 37.5em), only screen and (hover: none) {
     .tour {
       min-height: auto; } }
 
@@ -1178,7 +1178,7 @@ header {
   @media only screen and (max-width: 56.25em) {
     .story {
       min-height: auto; } }
-  @media only screen and (max-width: 37.5em) {
+  @media only screen and (max-width: 37.5em), only screen and (hover: none) {
     .story {
       min-height: auto; } }
 
@@ -1200,7 +1200,7 @@ header {
     .booking {
       width: 100vw;
       min-height: auto; } }
-  @media only screen and (max-width: 37.5em) {
+  @media only screen and (max-width: 37.5em), only screen and (hover: none) {
     .booking {
       min-height: auto;
       padding: 3rem; } }
