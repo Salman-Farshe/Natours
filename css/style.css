@@ -37,6 +37,10 @@ breakpoint manager:
   padding: 0;
   box-sizing: border-box; }
 
+::selection {
+  background-color: #45d12d;
+  color: #fff; }
+
 html {
   font-size: 1rem; }
   @media (min-width: 112.5em) {

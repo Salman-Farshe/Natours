@@ -7,3 +7,7 @@
     box-sizing: border-box; // change the box model. so that no margin/padding are added.
 }
 
+::selection{
+    background-color: $color-light-green;
+    color: $color-light;
+}
