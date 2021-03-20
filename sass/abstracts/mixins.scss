@@ -22,27 +22,27 @@ breakpoint manager:
 */
 @mixin responsive($breakpoint) {
     @if($breakpoint == big){
-        @media (min-width: 112.5em) {
+        @media only screen and (min-width: 112.5em) {
             @content;
         }
     }
     @if($breakpoint == tab__landscape){
-        @media (max-width: 75em) {
+        @media only screen and (max-width: 75em) {
             @content;
         }
     }
     @if($breakpoint == tab__portait){
-        @media (max-width: 56.25em) {
+        @media only screen and (max-width: 56.25em) {
             @content;
         }
     }
     @if($breakpoint == phone){
-        @media (max-width: 37.5em) {
+        @media only screen and (max-width: 37.5em) {
             @content;
         }
     }
     @if($breakpoint == extra__small){
-        @media(max-width: 25em) {
+        @media only screen and (max-width: 25em) {
             @content;
         }
     }
